@@ -1,0 +1,18 @@
+compendiums:
+  players-handbook:
+    name: player-handbook
+    source-url: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook.index
+    urls:
+      items-armor.xml: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-armor.xml
+      items-weapons: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-weapons.xml
+      items-gear: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-gear.xml
+      items-packs: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-packs.xml
+      instrument: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-instrument.xml
+      items-tools.xml: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-tools.xml
+      items-mounts: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-mounts.xml
+      languages: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/languages.xml
+      feats: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/feats.xml
+      spells: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/spells.xml
+      deities: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/deities.xml
+      companions: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/companions.xml
+  

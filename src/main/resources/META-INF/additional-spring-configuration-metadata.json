@@ -1,0 +1,5 @@
+{"properties": [{
+   "name": "compendiums",
+      "type": "java.util.Map<java.lang.String,ie.dnd4j.configuration.CompendiumConfiguration>",
+      "sourceType": "ie.dnd4j.configuration.CompendiumSourcesConfiguration"
+}]}
