@@ -1,6 +1,7 @@
 # dnd4j-tools
 
-tools for dnd
+Tools for dnd
+
 Builds compendiums from Aurora input files
 
 Will be adding character sheet converter from aurora to foundryvtt
