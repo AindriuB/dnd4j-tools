@@ -25,7 +25,7 @@ import ie.dnd4j.Compendium;
 import ie.dnd4j.configuration.CompendiumConfiguration;
 import ie.dnd4j.configuration.CompendiumSourcesConfiguration;
 import ie.dnd4j.items.Armour;
-import ie.dnd4j.items.Tools;
+import ie.dnd4j.items.Item;
 import ie.dnd4j.items.Weapon;
 import ie.dnd4j.loader.CompendiumLoader;
 import ie.dnd4j.spells.Spell;
@@ -127,7 +127,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 
     private void processNode(Element element) {
 
-	Map<String, String> settersMap = new HashMap<String, String>();
+	Map<String, String> attributes = new HashMap<String, String>();
 
 	String name = element.getAttribute("name");
 	String type = element.getAttribute("type");
@@ -138,68 +138,82 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	for (Element e : setters) {
 	    List<Element> sets = DomUtils.getChildElementsByTagName(e, "set");
 	    sets.stream().forEach(node -> {
-		settersMap.put(node.getAttribute("name").toLowerCase(), node.getTextContent());
+		attributes.put(node.getAttribute("name").toLowerCase(), node.getTextContent());
 		String currency = node.getAttribute("currency").toLowerCase();
 		if (currency != null && !currency.isEmpty()) {
-		    settersMap.put("currency", currency);
+		    attributes.put("currency", currency);
+		}
+		String attributeType = node.getAttribute("type").toLowerCase();
+		if (attributeType != null && !attributeType.isEmpty()) {
+		    attributes.put("type", attributeType);
 		}
 	    });
 	}
 
 	switch (type.toLowerCase()) {
 	case "item":
-	    Tools tools = new Tools();
-	    tools.setCost(Integer.valueOf(settersMap.get("cost")));
+	    Item tools = new Item();
+	    tools.setCost(Integer.valueOf(attributes.get("cost")));
 	    tools.setName(name);
-	    tools.setProficiency(settersMap.get("proficiency"));
+	    tools.setProficiency(attributes.get("proficiency"));
 	    tools.setSource(source);
-	    tools.setWeight(settersMap.get("weight"));
-	    tools.setCurrency(settersMap.get("currency"));
-	    tools.setCategory(settersMap.get("category"));
+	    tools.setWeight(attributes.get("weight"));
+	    tools.setCurrency(attributes.get("currency"));
+	    tools.setCategory(attributes.get("category"));
+	    tools.setSlot(attributes.get("slot"));
+	    tools.setStackable(Boolean.valueOf(attributes.get("stackable")));
 	    tools.setType(type);
 	    tools.tag(id);
 	    this.compendium.getItems().put(id, tools);
 	    break;
 	case "armor":
 	    Armour armour = new Armour();
-	    armour.setCost(Integer.valueOf(settersMap.get("cost")));
+	    armour.setCost(Integer.valueOf(attributes.get("cost")));
 	    armour.setName(name);
-	    armour.setProficiency(settersMap.get("proficiency"));
+	    armour.setProficiency(attributes.get("proficiency"));
 	    armour.setSource(source);
-	    armour.setWeight(settersMap.get("weight"));
-	    armour.setCurrency(settersMap.get("currency"));
-	    armour.setCategory(settersMap.get("category"));
+	    armour.setWeight(attributes.get("weight"));
+	    armour.setCurrency(attributes.get("currency"));
+	    armour.setCategory(attributes.get("category"));
+	    armour.setSlot(attributes.get("slot"));
+	    armour.setStackable(Boolean.valueOf(attributes.get("stackable")));
 	    armour.setType(type);
 	    armour.tag(id);
 	    this.compendium.getItems().put(id, armour);
 	    break;
 	case "weapon":
 	    Weapon weapon = new Weapon();
-	    weapon.setCost(Integer.valueOf(settersMap.get("cost")));
+	    weapon.setCost(Integer.valueOf(attributes.get("cost")));
 	    weapon.setName(name);
-	    weapon.setProficiency(settersMap.get("proficiency"));
+	    weapon.setProficiency(attributes.get("proficiency"));
 	    weapon.setSource(source);
-	    weapon.setWeight(settersMap.get("weight"));
-	    weapon.setCurrency(settersMap.get("currency"));
-	    weapon.setCategory(settersMap.get("category"));
+	    weapon.setWeight(attributes.get("weight"));
+	    weapon.setCurrency(attributes.get("currency"));
+	    weapon.setCategory(attributes.get("category"));
 	    weapon.setType(type);
+	    weapon.setDamageType(attributes.get("type"));
+	    weapon.setSlot(attributes.get("slot"));
+	    weapon.setStackable(Boolean.valueOf(attributes.get("stackable")));
+	    weapon.setRange(attributes.get("range"));
+	    weapon.setDamage(attributes.get("damage"));
+	    weapon.setVersatile(attributes.get("versatile"));
 	    weapon.tag(id);
 	    this.compendium.getItems().put(id, weapon);
 	    break;
 	case "spell":
 	    Spell spell = new Spell();
 	    spell.setName(name);
-	    spell.setCastTime(settersMap.get("time"));
+	    spell.setCastTime(attributes.get("time"));
 	    spell.setClasses("");
-	    spell.setConcentration(Boolean.valueOf(settersMap.get("isConcentration")));
-	    spell.setDuration(settersMap.get("duration"));
-	    spell.setLevel(Integer.parseInt(settersMap.get("level")));
-	    spell.setMaterialComponens(settersMap.get("materialComponent"));
-	    spell.setMaterialComponent(Boolean.valueOf(settersMap.get("hasMaterialComponent")));
-	    spell.setRange(settersMap.get("range"));
-	    spell.setRitual(Boolean.valueOf(settersMap.get("isRitual")));
-	    spell.setSchool(settersMap.get("school"));
-	    spell.setSomaticComponent(Boolean.valueOf(settersMap.get("hasSomaticComponent")));
+	    spell.setConcentration(Boolean.valueOf(attributes.get("isConcentration")));
+	    spell.setDuration(attributes.get("duration"));
+	    spell.setLevel(Integer.parseInt(attributes.get("level")));
+	    spell.setMaterialComponens(attributes.get("materialComponent"));
+	    spell.setMaterialComponent(Boolean.valueOf(attributes.get("hasMaterialComponent")));
+	    spell.setRange(attributes.get("range"));
+	    spell.setRitual(Boolean.valueOf(attributes.get("isRitual")));
+	    spell.setSchool(attributes.get("school"));
+	    spell.setSomaticComponent(Boolean.valueOf(attributes.get("hasSomaticComponent")));
 	    spell.setVerbalComponent(Boolean.valueOf("hasVerbalComponent"));
 	    spell.tag(id);
 	    this.compendium.getSpells().put(id, spell);
