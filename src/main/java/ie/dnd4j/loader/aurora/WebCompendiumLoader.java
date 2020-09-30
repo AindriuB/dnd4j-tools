@@ -28,6 +28,8 @@ import ie.dnd4j.items.Armour;
 import ie.dnd4j.items.Item;
 import ie.dnd4j.items.Weapon;
 import ie.dnd4j.loader.CompendiumLoader;
+import ie.dnd4j.race.Race;
+import ie.dnd4j.rules.RacialAbilityModifier;
 import ie.dnd4j.spells.Spell;
 
 public class WebCompendiumLoader implements CompendiumLoader {
@@ -128,11 +130,16 @@ public class WebCompendiumLoader implements CompendiumLoader {
     private void processNode(Element element) {
 
 	Map<String, String> attributes = new HashMap<String, String>();
+	Map<String, String> stats = new HashMap<String, String>();
 
 	String name = element.getAttribute("name");
 	String type = element.getAttribute("type");
 	String source = element.getAttribute("source");
 	String id = element.getAttribute("id");
+	
+	
+	Element description = DomUtils.getChildElementByTagName(element, "description");
+	String descriptionText = getDescription(description);
 
 	List<Element> setters = DomUtils.getChildElementsByTagName(element, "setters");
 	for (Element e : setters) {
@@ -149,12 +156,21 @@ public class WebCompendiumLoader implements CompendiumLoader {
 		}
 	    });
 	}
+	
+	List<Element> rules = DomUtils.getChildElementsByTagName(element, "rules");
+	for (Element e : rules) {
+	    List<Element> stat = DomUtils.getChildElementsByTagName(e, "stat");
+	    stat.stream().forEach(node -> {
+		stats.put(node.getAttribute("name").toLowerCase(), node.getAttribute("value"));
+	    });
+	}
 
 	switch (type.toLowerCase()) {
 	case "item":
 	    Item tools = new Item();
 	    tools.setCost(Integer.valueOf(attributes.get("cost")));
 	    tools.setName(name);
+	    tools.setDescription(descriptionText);
 	    tools.setProficiency(attributes.get("proficiency"));
 	    tools.setSource(source);
 	    tools.setWeight(attributes.get("weight"));
@@ -169,6 +185,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	case "armor":
 	    Armour armour = new Armour();
 	    armour.setCost(Integer.valueOf(attributes.get("cost")));
+	    armour.setDescription(descriptionText);
 	    armour.setName(name);
 	    armour.setProficiency(attributes.get("proficiency"));
 	    armour.setSource(source);
@@ -183,6 +200,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    break;
 	case "weapon":
 	    Weapon weapon = new Weapon();
+	    weapon.setDescription(descriptionText);
 	    weapon.setCost(Integer.valueOf(attributes.get("cost")));
 	    weapon.setName(name);
 	    weapon.setProficiency(attributes.get("proficiency"));
@@ -202,6 +220,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    break;
 	case "spell":
 	    Spell spell = new Spell();
+	    spell.setDescription(descriptionText);
 	    spell.setName(name);
 	    spell.setCastTime(attributes.get("time"));
 	    spell.setClasses("");
@@ -217,10 +236,47 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    spell.setVerbalComponent(Boolean.valueOf("hasVerbalComponent"));
 	    spell.tag(id);
 	    this.compendium.getSpells().put(id, spell);
-
+	    break;
+	case "race":
+	    Race race = new Race();
+	    race.setDescription(descriptionText);
+	    race.setName(name);
+	    race.setSpeed(convertNumber(stats.get("innate speed")));
+	    int strength = convertNumber(stats.get("strength"));
+	    int dexterity = convertNumber(stats.get("dexterity"));
+	    int constitution = convertNumber(stats.get("constitution"));
+	    int intelligence = convertNumber(stats.get("intelligence"));
+	    int wisdom = convertNumber(stats.get("wisdom"));
+	    int charisma = convertNumber(stats.get("charisma"));
+	    RacialAbilityModifier abilityModifier = new RacialAbilityModifier(strength, dexterity, constitution, intelligence, wisdom, charisma);
+	    race.setRacialAbilityModifier(abilityModifier);
+	    this.compendium.getRaces().put(id, race);
+	    break;
 	default:
+	    break;
+	
 	}
 
+    }
+    
+    private int convertNumber(String value) {
+	if(value == null) {
+	    return 0;
+	} else {
+	    try {
+		return Integer.valueOf(value).intValue();
+	    } catch (NumberFormatException e) {
+		return 0;
+	    }
+	}
+	
+    }
+    
+    private String getDescription(Element description) {
+	if(description == null) {
+	    return "";
+	}
+	return description.getTextContent();
     }
 
     public CompendiumSourcesConfiguration getCompendiumConfiguration() {

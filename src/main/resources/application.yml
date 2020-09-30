@@ -3,6 +3,15 @@ compendiums:
     name: player-handbook
     source-url: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook.index
     urls:
+      race-dragonborn: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-dragonborn.xml
+      race-dwarf: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-dwarf.xml
+      race-elf: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-elf.xml
+      race-gnome: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-gnome.xml
+      race-halfelf: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-halfelf.xml
+      race-halfling: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-halfling.xml
+      race-halforc: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-halforc.xml
+      race-human: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-human.xml
+      race-tiefling: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-tiefling.xml
       items-armor.xml: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-armor.xml
       items-weapons: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-weapons.xml
       items-gear: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-gear.xml
