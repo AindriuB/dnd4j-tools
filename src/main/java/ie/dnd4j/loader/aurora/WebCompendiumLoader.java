@@ -25,11 +25,14 @@ import ie.dnd4j.Compendium;
 import ie.dnd4j.configuration.CompendiumConfiguration;
 import ie.dnd4j.configuration.CompendiumSourcesConfiguration;
 import ie.dnd4j.items.Armour;
+import ie.dnd4j.items.ArmourType;
 import ie.dnd4j.items.Item;
 import ie.dnd4j.items.Weapon;
 import ie.dnd4j.loader.CompendiumLoader;
 import ie.dnd4j.race.Race;
-import ie.dnd4j.rules.RacialAbilityModifier;
+import ie.dnd4j.rules.dependencies.StrengthDependency;
+import ie.dnd4j.rules.stats.ArmourClassRule;
+import ie.dnd4j.rules.stats.RacialAbilityModifier;
 import ie.dnd4j.spells.Spell;
 
 public class WebCompendiumLoader implements CompendiumLoader {
@@ -47,9 +50,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	compendium.setSource("Aurora");
     }
 
-    /***
-     * 
-     */
+
     @Override
     public void loadCompendiums() {
 	Map<String, Document> documentMap = new HashMap<String, Document>();
@@ -82,10 +83,21 @@ public class WebCompendiumLoader implements CompendiumLoader {
 
     }
 
+    /**
+     * Default encoding of UTF-8
+     * @param xml
+     * @return
+     */
     private Document parseXML(String xml) {
 	return parseXML(xml, "UTF-8");
     }
 
+    /***
+     * Parse the XML body from the end point
+     * @param xml
+     * @param encoding
+     * @return an XML Document
+     */
     private Document parseXML(String xml, String encoding) {
 	if (encoding == null) {
 	    encoding = "UTF-8";
@@ -110,6 +122,10 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	return doc;
     }
 
+    /**
+     * Build the compendium from our XML documents
+     * @param documents
+     */
     private void buildCompendium(Map<String, Document> documents) {
 	if (documents.isEmpty()) {
 	    return;
@@ -127,6 +143,12 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	});
     }
 
+    
+    
+    /***
+     * Process an element node
+     * @param element
+     */
     private void processNode(Element element) {
 
 	Map<String, String> attributes = new HashMap<String, String>();
@@ -195,7 +217,19 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    armour.setSlot(attributes.get("slot"));
 	    armour.setStackable(Boolean.valueOf(attributes.get("stackable")));
 	    armour.setType(type);
+	    armour.setArmour(attributes.get("armor"));
 	    armour.tag(id);
+	    
+    	    int ac =  convertNumber(stats.get("ac:armored:armor"));
+    	    
+    	    ArmourClassRule rule = new ArmourClassRule(ac, ArmourType.forString(armour.getArmour()));
+    	    String check = attributes.get("strength");
+    	    if(check != null) {
+    		int strengthCheck = convertNumber(attributes.get("strength"));
+    	    	rule.addDependency(new StrengthDependency(strengthCheck));
+    	    }
+    	    
+	    armour.addRule(rule);
 	    this.compendium.getItems().put(id, armour);
 	    break;
 	case "weapon":
