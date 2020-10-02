@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -167,7 +168,8 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	String name = element.getAttribute("name");
 	String type = element.getAttribute("type");
 	String source = element.getAttribute("source");
-	String id = element.getAttribute("id");
+	String id = UUID.randomUUID().toString();
+	String tag = element.getAttribute("id");
 
 	Element descriptionElement = DomUtils.getChildElementByTagName(element, "description");
 	String description = getDescription(descriptionElement);
@@ -221,7 +223,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    tools.setSlot(attributes.get("slot"));
 	    tools.setStackable(Boolean.valueOf(attributes.get("stackable")));
 	    tools.setType(type);
-	    tools.tag(id);
+	    tools.tag(tag);
 	    this.compendium.getItems().put(id, tools);
 	    break;
 	case "armor":
@@ -238,7 +240,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    armour.setStackable(Boolean.valueOf(attributes.get("stackable")));
 	    armour.setType(type);
 	    armour.setArmour(attributes.get("armor"));
-	    armour.tag(id);
+	    armour.tag(tag);
 
 	    int ac = convertNumber(stats.get("ac:armored:armor"));
 
@@ -269,7 +271,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    weapon.setRange(attributes.get("range"));
 	    weapon.setDamage(attributes.get("damage"));
 	    weapon.setVersatile(attributes.get("versatile"));
-	    weapon.tag(id);
+	    weapon.tag(tag);
 	    this.compendium.getItems().put(id, weapon);
 	    break;
 	case "spell":
@@ -288,7 +290,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    spell.setSchool(attributes.get("school"));
 	    spell.setSomaticComponent(Boolean.valueOf(attributes.get("hasSomaticComponent")));
 	    spell.setVerbalComponent(Boolean.valueOf("hasVerbalComponent"));
-	    spell.tag(id);
+	    spell.tag(tag);
 	    this.compendium.getSpells().put(id, spell);
 	    break;
 	case "race":
@@ -305,6 +307,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    RacialAbilityModifierRule abilityModifier = new RacialAbilityModifierRule(strength, dexterity, constitution,
 		    intelligence, wisdom, charisma);
 	    race.setRacialAbilityModifier(abilityModifier);
+	    race.tag(tag);
 	    this.compendium.getRaces().put(id, race);
 	    break;
 	case "deity":
@@ -317,7 +320,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    deity.setDomains(listForString(attributes.get("domains")));
 	    deity.setGender(attributes.get("gender"));
 	    deity.setSymbol(attributes.get("symbol"));
-	    deity.tag(id);
+	    deity.tag(tag);
 	    this.compendium.getDeities().put(id, deity);
 	    break;
 	case "feat":
@@ -325,6 +328,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    feat.setName(name);
 	    feat.setDescription(description);
 	    feat.setType(type);
+	    feat.tag(tag);
 	    this.compendium.getFeats().put(id, feat);
 	    break;
 	case "feat feature":
@@ -342,6 +346,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    background.setIdeal(select.get("Ideal"));
 	    background.setBond(select.get("Bond"));
 	    background.setFlaw(select.get("Flaw"));
+	    background.tag(tag);
 	    this.compendium.getBackgrounds().put(id, background);
 	    break;
 	default:
