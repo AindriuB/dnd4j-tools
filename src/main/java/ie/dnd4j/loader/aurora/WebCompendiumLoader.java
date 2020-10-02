@@ -38,7 +38,7 @@ import ie.dnd4j.race.Race;
 import ie.dnd4j.religion.Deity;
 import ie.dnd4j.rules.dependencies.AbilityDependency;
 import ie.dnd4j.rules.stats.ArmourClassRule;
-import ie.dnd4j.rules.stats.RacialAbilityModifier;
+import ie.dnd4j.rules.stats.RacialAbilityModifierRule;
 import ie.dnd4j.spells.Spell;
 
 public class WebCompendiumLoader implements CompendiumLoader {
@@ -288,7 +288,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    int intelligence = convertNumber(stats.get("intelligence"));
 	    int wisdom = convertNumber(stats.get("wisdom"));
 	    int charisma = convertNumber(stats.get("charisma"));
-	    RacialAbilityModifier abilityModifier = new RacialAbilityModifier(strength, dexterity, constitution,
+	    RacialAbilityModifierRule abilityModifier = new RacialAbilityModifierRule(strength, dexterity, constitution,
 		    intelligence, wisdom, charisma);
 	    race.setRacialAbilityModifier(abilityModifier);
 	    this.compendium.getRaces().put(id, race);
