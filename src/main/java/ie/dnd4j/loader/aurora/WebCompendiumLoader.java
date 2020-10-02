@@ -23,6 +23,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import ie.dnd4j.Compendium;
+import ie.dnd4j.abilities.Ability;
 import ie.dnd4j.character.Alignment;
 import ie.dnd4j.configuration.CompendiumConfiguration;
 import ie.dnd4j.configuration.CompendiumSourcesConfiguration;
@@ -35,7 +36,7 @@ import ie.dnd4j.items.Weapon;
 import ie.dnd4j.loader.CompendiumLoader;
 import ie.dnd4j.race.Race;
 import ie.dnd4j.religion.Deity;
-import ie.dnd4j.rules.dependencies.StrengthDependency;
+import ie.dnd4j.rules.dependencies.AbilityDependency;
 import ie.dnd4j.rules.stats.ArmourClassRule;
 import ie.dnd4j.rules.stats.RacialAbilityModifier;
 import ie.dnd4j.spells.Spell;
@@ -231,7 +232,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    String check = attributes.get("strength");
 	    if (check != null) {
 		int strengthCheck = convertNumber(attributes.get("strength"));
-		rule.addDependency(new StrengthDependency(strengthCheck));
+		rule.addDependency(new AbilityDependency(Ability.STRENGTH, strengthCheck));
 	    }
 
 	    armour.addRule(rule);
