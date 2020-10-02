@@ -6208,8 +6208,7 @@
         "type" : "MEDIUM",
         "armourClass" : 13
       } ],
-      "armour" : "Medium",
-      "armourClass" : 0
+      "armour" : "Medium"
     },
     "ID_WOTC_PHB_ITEM_PONY" : {
       "name" : "Pony",
@@ -6547,8 +6546,7 @@
         "type" : "LIGHT",
         "armourClass" : 12
       } ],
-      "armour" : "Light",
-      "armourClass" : 0
+      "armour" : "Light"
     },
     "ID_WOTC_PHB_ITEM_DONKEY" : {
       "name" : "Donkey",
@@ -6625,8 +6623,7 @@
         "type" : "HEAVY",
         "armourClass" : 14
       } ],
-      "armour" : "Heavy",
-      "armourClass" : 0
+      "armour" : "Heavy"
     },
     "ID_WOTC_PHB_WEAPON_SPEAR" : {
       "name" : "Spear",
@@ -6961,8 +6958,7 @@
         "type" : "MEDIUM",
         "armourClass" : 14
       } ],
-      "armour" : "Medium",
-      "armourClass" : 0
+      "armour" : "Medium"
     },
     "ID_WOTC_PHB_ITEM_SADDLEBAGS" : {
       "name" : "Saddlebags",
@@ -7021,8 +7017,7 @@
         "type" : "MEDIUM",
         "armourClass" : 14
       } ],
-      "armour" : "Medium",
-      "armourClass" : 0
+      "armour" : "Medium"
     },
     "ID_WOTC_PHB_ITEM_PARCHMENT_ONESHEET" : {
       "name" : "Parchment (one sheet)",
@@ -7188,8 +7183,7 @@
         "type" : "HEAVY",
         "armourClass" : 16
       } ],
-      "armour" : "Heavy",
-      "armourClass" : 0
+      "armour" : "Heavy"
     },
     "ID_WOTC_PHB_ITEM_CASE_CROSSBOWBOLT" : {
       "name" : "Case, Crossbow Bolt",
@@ -7593,8 +7587,7 @@
         "type" : "MEDIUM",
         "armourClass" : 15
       } ],
-      "armour" : "Medium",
-      "armourClass" : 0
+      "armour" : "Medium"
     },
     "ID_WOTC_PHB_ITEM_TOOL_LEATHERWORKERS_TOOLS" : {
       "name" : "Leatherworker’s Tools",
@@ -7627,8 +7620,7 @@
         "dependencies" : [ ],
         "armourClass" : 0
       } ],
-      "armour" : "Shield",
-      "armourClass" : 0
+      "armour" : "Shield"
     },
     "ID_WOTC_PHB_ITEM_TOOL_DRAGONCHESS_SET" : {
       "name" : "Dragonchess Set",
@@ -7662,8 +7654,7 @@
         "type" : "MEDIUM",
         "armourClass" : 12
       } ],
-      "armour" : "Medium",
-      "armourClass" : 0
+      "armour" : "Medium"
     },
     "ID_WOTC_PHB_ITEM_WAGON" : {
       "name" : "Wagon",
@@ -7802,8 +7793,7 @@
         "type" : "HEAVY",
         "armourClass" : 17
       } ],
-      "armour" : "Heavy",
-      "armourClass" : 0
+      "armour" : "Heavy"
     },
     "ID_WOTC_PHB_WEAPON_NET" : {
       "name" : "Net",
@@ -8533,8 +8523,7 @@
         "type" : "LIGHT",
         "armourClass" : 11
       } ],
-      "armour" : "Light",
-      "armourClass" : 0
+      "armour" : "Light"
     },
     "ID_WOTC_ARMOR_LIGHT_PADDED" : {
       "name" : "Padded",
@@ -8554,8 +8543,7 @@
         "type" : "LIGHT",
         "armourClass" : 11
       } ],
-      "armour" : "Light",
-      "armourClass" : 0
+      "armour" : "Light"
     },
     "ID_WOTC_PHB_WEAPON_SCIMITAR" : {
       "name" : "Scimitar",
@@ -8625,8 +8613,7 @@
         "type" : "HEAVY",
         "armourClass" : 18
       } ],
-      "armour" : "Heavy",
-      "armourClass" : 0
+      "armour" : "Heavy"
     },
     "ID_WOTC_PHB_ITEM_ANTITOXIN_VIAL" : {
       "name" : "Antitoxin (vial)",
@@ -8663,14 +8650,6 @@
       "speed" : 25,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 0,
-          "DEXTERITY" : 0,
-          "STRENGTH" : 0,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 2,
-          "CHARISMA" : 0
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 0,
           "DEXTERITY" : 0,
@@ -8687,14 +8666,6 @@
       "speed" : 25,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 2,
-          "DEXTERITY" : 0,
-          "STRENGTH" : 0,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 0,
-          "CHARISMA" : 0
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 2,
           "DEXTERITY" : 0,
@@ -8711,14 +8682,6 @@
       "speed" : 30,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 0,
-          "DEXTERITY" : 0,
-          "STRENGTH" : 0,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 1,
-          "CHARISMA" : 2
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 0,
           "DEXTERITY" : 0,
@@ -8735,14 +8698,6 @@
       "speed" : 30,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 0,
-          "DEXTERITY" : 2,
-          "STRENGTH" : 0,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 0,
-          "CHARISMA" : 0
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 0,
           "DEXTERITY" : 2,
@@ -8759,14 +8714,6 @@
       "speed" : 25,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 0,
-          "DEXTERITY" : 2,
-          "STRENGTH" : 0,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 0,
-          "CHARISMA" : 0
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 0,
           "DEXTERITY" : 2,
@@ -8783,14 +8730,6 @@
       "speed" : 30,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 1,
-          "DEXTERITY" : 1,
-          "STRENGTH" : 1,
-          "WISDOM" : 1,
-          "INTELLIGENCE" : 1,
-          "CHARISMA" : 1
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 1,
           "DEXTERITY" : 1,
@@ -8807,14 +8746,6 @@
       "speed" : 30,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 0,
-          "DEXTERITY" : 0,
-          "STRENGTH" : 0,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 0,
-          "CHARISMA" : 2
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 0,
           "DEXTERITY" : 0,
@@ -8831,14 +8762,6 @@
       "speed" : 30,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 1,
-          "DEXTERITY" : 0,
-          "STRENGTH" : 2,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 0,
-          "CHARISMA" : 0
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 1,
           "DEXTERITY" : 0,
@@ -8855,14 +8778,6 @@
       "speed" : 30,
       "racialAbilityModifier" : {
         "dependencies" : [ ],
-        "abilities" : {
-          "CONSTITUTION" : 0,
-          "DEXTERITY" : 0,
-          "STRENGTH" : 2,
-          "WISDOM" : 0,
-          "INTELLIGENCE" : 0,
-          "CHARISMA" : 1
-        },
         "abilityModifiers" : {
           "CONSTITUTION" : 0,
           "DEXTERITY" : 0,
@@ -8872,6 +8787,1635 @@
           "CHARISMA" : 1
         }
       }
+    }
+  },
+  "deities" : {
+    "ID_WOTC_PHB_DEITY_SARGONNAS" : {
+      "name" : "Sargonnas",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgod of vengeance and fire\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Stylized red condor",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_HABBAKUK" : {
+      "name" : "Habbakuk",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of animal life and the sea\n\t\t",
+      "domains" : [ "Nature", " Tempest" ],
+      "symbol" : "Blue bird",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MORADIN" : {
+      "name" : "Moradin",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tdwarf god of creation\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Hammer and anvil",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_HIDDUKEL" : {
+      "name" : "Hiddukel",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of lies and greed\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Broken merchant’s scales",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SKORAEUS_STONEBONES" : {
+      "name" : "Skoraeus Stonebones",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of stone giants and art\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Stalactite",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_ISTUS" : {
+      "name" : "Istus",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgoddess of fate and destiny\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Weaver's spindle with three strands",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_DOL_DORN" : {
+      "name" : "Dol Dorn",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\tgod of strength at arms\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Longsword crossed over a shield",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_RILLIFANE_RALLATHIL" : {
+      "name" : "Rillifane Rallathil",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\twood elf god of nature\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Oak",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_KURTULMAK" : {
+      "name" : "Kurtulmak",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tkobold god of war and mining\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Gnome skull",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_PHOLTUS" : {
+      "name" : "Pholtus",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of light and law\n\t\t",
+      "domains" : [ "Light" ],
+      "symbol" : "Silver sun or full moon partially eclipsed by a smaller crescent moon",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_WAUKEEN" : {
+      "name" : "Waukeen",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgoddess of trade\n\t\t",
+      "domains" : [ "Knowledge", " Trickery" ],
+      "symbol" : "Upright coin with Waukeen’s profile facing left",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_SOLINARI" : {
+      "name" : "Solinari",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of good magic\n\t\t",
+      "domains" : [ "no clerics" ],
+      "symbol" : "White circle or sphere",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_BAHAMUT" : {
+      "name" : "Bahamut",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tdragon god of good\n\t\t",
+      "domains" : [ "Life", " War" ],
+      "symbol" : "Dragon’s head in profile",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_VECNA" : {
+      "name" : "Vecna",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of evil secrets\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Hand with eye in the palm",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SHAR" : {
+      "name" : "Shar",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgoddess of darkness and loss\n\t\t",
+      "domains" : [ "Death", " Trickery" ],
+      "symbol" : "Black disk encircled with a border",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_THRYM" : {
+      "name" : "Thrym",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of frost giants and strength\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "White double-bladed axe",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SEHANINE_MOONBOW" : {
+      "name" : "Sehanine Moonbow",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\telf goddess of the moon\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Crescent moon",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_BALINOR" : {
+      "name" : "Balinor",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of beasts and the hunt\n\t\t",
+      "domains" : [ "Life", " Nature" ],
+      "symbol" : "Pair of antlers",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_THE_KEEPER" : {
+      "name" : "The Keeper",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of greed and death\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Dragonshard stone in the shape of a fang",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_KIRI_JOLITH" : {
+      "name" : "Kiri-Jolith",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of honor and war\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Bison’s horns",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_THE_SILVER_FLAME" : {
+      "name" : "The Silver Flame",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tdeity of protection and good\n\t\t",
+      "domains" : [ "Life", " Light", " War" ],
+      "symbol" : "Flame drawn on silver or molded from silver",
+      "gender" : ""
+    },
+    "ID_WOTC_PHB_DEITY_HEIRONEOUS" : {
+      "name" : "Heironeous",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of chivalry and valor\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Lightning bolt",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MYRKUL" : {
+      "name" : "Myrkul",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of death\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "White human skull",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_ONATAR" : {
+      "name" : "Onatar",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of craft\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Crossed hammer and tongs",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SEKOLAH" : {
+      "name" : "Sekolah",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tsahuagin god of the hunt\n\t\t",
+      "domains" : [ "Nature", " Tempest" ],
+      "symbol" : "Shark",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_KELEMVOR" : {
+      "name" : "Kelemvor",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tgod of the dead\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Upright skeletal arm holding balanced scales",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_ERYTHNUL" : {
+      "name" : "Erythnul",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of envy and slaughter\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Blood drop",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_BESHABA" : {
+      "name" : "Beshaba",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgoddess of misfortune\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Black antlers",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_ST_CUTHBERT" : {
+      "name" : "St. Cuthbert",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tgod of common sense and zeal\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Circle at the center of a starburst of lines",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_THE_FURY" : {
+      "name" : "The Fury",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgoddess of wrath and madness\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Winged wyrm with woman’s head and upper body",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_HEXTOR" : {
+      "name" : "Hextor",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgod of war and discord\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Six arrows facing downward in a fan",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_TRITHEREON" : {
+      "name" : "Trithereon",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\tgod of liberty and retribution\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Triskelion",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_CHISLEV" : {
+      "name" : "Chislev",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgoddess of nature\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Feather",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_ZEBOIM" : {
+      "name" : "Zeboim",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgoddess of the sea and storms\n\t\t",
+      "domains" : [ "Tempest" ],
+      "symbol" : "Turtle shell",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_SAVRAS" : {
+      "name" : "Savras",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tgod of divination and fate\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Crystal ball containing many kinds of eyes",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_PELOR" : {
+      "name" : "Pelor",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of the sun and healing\n\t\t",
+      "domains" : [ "Life", " Light" ],
+      "symbol" : "Sun",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_CHAUNTEA" : {
+      "name" : "Chauntea",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgoddess of agriculture\n\t\t",
+      "domains" : [ "Life" ],
+      "symbol" : "Sheaf of grain or a blooming rose over grain",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_LOVIATAR" : {
+      "name" : "Loviatar",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgoddess of pain\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Nine-tailed barbed scourge",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_BLIBDOOLPOOLP" : {
+      "name" : "Blibdoolpoolp",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tkuo-toa goddess\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Lobster head or black pearl",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_OGHMA" : {
+      "name" : "Oghma",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of knowledge\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Blank scroll",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MIELIKKI" : {
+      "name" : "Mielikki",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgoddess of forests\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Unicorn’s head",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_SHINARE" : {
+      "name" : "Shinare",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgoddess of wealth and trade\n\t\t",
+      "domains" : [ "Knowledge", " Trickery" ],
+      "symbol" : "Griffon’s wing",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_MAGLUBIYET" : {
+      "name" : "Maglubiyet",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgoblinoid god of war\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Bloody axe",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_AUREON" : {
+      "name" : "Aureon",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tgod of law and knowledge\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Open tome",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_ILMATER" : {
+      "name" : "Ilmater",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of endurance\n\t\t",
+      "domains" : [ "Life" ],
+      "symbol" : "Hands bound at the wrist with red cord",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_EADRO" : {
+      "name" : "Eadro",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tmerfolk deity of the sea\n\t\t",
+      "domains" : [ "Nature", " Tempest" ],
+      "symbol" : "Spiral design",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_GRUUMSH" : {
+      "name" : "Gruumsh",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\torc god of storms and war\n\t\t",
+      "domains" : [ "Tempest", " War" ],
+      "symbol" : "Unblinking eye",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SILVANUS" : {
+      "name" : "Silvanus",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of wild nature\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Oak leaf",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_RAO" : {
+      "name" : "Rao",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of peace and reason\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "White heart",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_HELM" : {
+      "name" : "Helm",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tgod of protection\n\t\t",
+      "domains" : [ "Life", " Light" ],
+      "symbol" : "Staring eye on upright left gauntlet",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_THE_SPIRITS_OF_THE_PAST" : {
+      "name" : "The Spirits of the Past",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\telven ancestors\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Varies",
+      "gender" : ""
+    },
+    "ID_WOTC_PHB_DEITY_AZUTH" : {
+      "name" : "Azuth",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tgod of wizards\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Left hand pointing upward, outlined in fire",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_BANE" : {
+      "name" : "Bane",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgod of tyranny\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Upright black right hand, thumb and fingers together",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_THE_BLOOD_OF_VOL" : {
+      "name" : "The Blood of Vol",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tphilosophy of immortality and undeath\n\t\t",
+      "domains" : [ "Death", " Life" ],
+      "symbol" : "Stylized dragon skull on red teardrop gem",
+      "gender" : "philosophy of immortality and undeath"
+    },
+    "ID_WOTC_PHB_DEITY_LUZ" : {
+      "name" : "luz",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of pain and oppression\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Grinning human skull",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_ZIVILYN" : {
+      "name" : "Zivilyn",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of wisdom\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Great green or gold tree",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_BEORY" : {
+      "name" : "Beory",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgoddess of nature\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Green disk",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_THARIZDUN" : {
+      "name" : "Tharizdun",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of eternal darkness\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Dark spiral or inverted ziggurat",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_LUNITARI" : {
+      "name" : "Lunitari",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgoddess of neutral magic\n\t\t",
+      "domains" : [ "no clerics" ],
+      "symbol" : "Red circle or sphere",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_THE_DEVOURER" : {
+      "name" : "The Devourer",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of nature’s wrath\n\t\t",
+      "domains" : [ "Tempest" ],
+      "symbol" : "Bundle of five sharpened bones",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_TALONA" : {
+      "name" : "Talona",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgoddess of disease and poison\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Three teardrops on a triangle",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_TALOS" : {
+      "name" : "Talos",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of storms\n\t\t",
+      "domains" : [ "Tempest" ],
+      "symbol" : "Three lightning bolts radiating from a central point",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MYSTRA" : {
+      "name" : "Mystra",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgoddess of magic\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Circle of seven stars, or nine stars encircling a flowing red mist, or a single star",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_REORX" : {
+      "name" : "Reorx",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of craft\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Forging hammer",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_LEIRA" : {
+      "name" : "Leira",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CN",
+      "description" : "\n\t\t\tgoddess of illusion\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Point-down triangle containing a swirl of mist",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_SKERRIT" : {
+      "name" : "Skerrit",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tcentaur and satyr god of nature\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Oak growing from acorn",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_GROLANTOR" : {
+      "name" : "Grolantor",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\thill giant god of war\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Wooden club",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_DENEIR" : {
+      "name" : "Deneir",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of writing\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Lit candle above an open eye",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MAJERE" : {
+      "name" : "Majere",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of meditation and order\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Copper spider",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_CYRIC" : {
+      "name" : "Cyric",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of lies\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "White jawless skull on black or purple sunburst",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_BOLDREI" : {
+      "name" : "Boldrei",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgoddess of community and home\n\t\t",
+      "domains" : [ "Life" ],
+      "symbol" : "Fire in a stone hearth",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_NERULL" : {
+      "name" : "Nerull",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of death\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Skull with either a sickle or a scythe",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_CULTS_OF_THE_DRAGON_BELOW" : {
+      "name" : "Cults of the Dragon Below",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tdeities of madness\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Varies",
+      "gender" : ""
+    },
+    "ID_WOTC_PHB_DEITY_BRANCHALA" : {
+      "name" : "Branchala",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of music\n\t\t",
+      "domains" : [ "Light" ],
+      "symbol" : "Bard’s harp",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_PALADINE" : {
+      "name" : "Paladine",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of rulers and guardians\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Silver triangle",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_OLIDAMMARA" : {
+      "name" : "Olidammara",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CN",
+      "description" : "\n\t\t\tgod of revelry\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Laughing mask",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_GILEAN" : {
+      "name" : "Gilean",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of knowledge\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Open book",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_TYMORA" : {
+      "name" : "Tymora",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\tgoddess of good fortune\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Face-up coin",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_EHLONNA" : {
+      "name" : "Ehlonna",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgoddess of woodlands\n\t\t",
+      "domains" : [ "Life", " Nature" ],
+      "symbol" : "Unicorn horn",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_FHARLANGHN" : {
+      "name" : "Fharlanghn",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of horizons and travel\n\t\t",
+      "domains" : [ "Knowledge", " Trickery" ],
+      "symbol" : "Circle crossed by a curved horizon line",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_ARAWAI" : {
+      "name" : "Arawai",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgoddess of fertility\n\t\t",
+      "domains" : [ "Life", " Nature" ],
+      "symbol" : "Sheaf of wheat tied with green ribbon",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_MILIL" : {
+      "name" : "Milil",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of poetry and song\n\t\t",
+      "domains" : [ "Light" ],
+      "symbol" : "Five-stringed harp made of leaves",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_INCABULOS" : {
+      "name" : "Incabulos",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of plague and famine\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Reptilian eye with a horizontal diamond",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_TAKHISIS" : {
+      "name" : "Takhisis",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgoddess of night and hatred\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Black crescent",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_UMBERLEE" : {
+      "name" : "Umberlee",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgoddess of the sea\n\t\t",
+      "domains" : [ "Tempest" ],
+      "symbol" : "Wave curling left and right",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_ULAA" : {
+      "name" : "Ulaa",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgoddess of hills and mountains\n\t\t",
+      "domains" : [ "Life", " War" ],
+      "symbol" : "Mountain with a circle at its heart",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_SEMUANYA" : {
+      "name" : "Semuanya",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tlizardfolk deity of survival\n\t\t",
+      "domains" : [ "Life" ],
+      "symbol" : "Egg",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_NUITARI" : {
+      "name" : "Nuitari",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgod of evil magic\n\t\t",
+      "domains" : [ "no clerics" ],
+      "symbol" : "Black circle or sphere",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_TORM" : {
+      "name" : "Torm",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of courage and self-sacrifice\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "White right gauntlet",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_TEMPUS" : {
+      "name" : "Tempus",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of war\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Upright flaming sword",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SURTUR" : {
+      "name" : "Surtur",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgod of fire giants and craft\n\t\t",
+      "domains" : [ "Knowledge", " War" ],
+      "symbol" : "Flaming sword",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_CELESTIAN" : {
+      "name" : "Celestian",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of stars and wanderers\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Arc of seven stars inside a circle",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_OLLADRA" : {
+      "name" : "Olladra",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgoddess of good fortune\n\t\t",
+      "domains" : [ "Life", " Trickery" ],
+      "symbol" : "Domino",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_CORELLON_LARETHIAN" : {
+      "name" : "Corellon Larethian",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\telf deity of art and magic\n\t\t",
+      "domains" : [ "Light" ],
+      "symbol" : "Quarter moon or starburst",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MASK" : {
+      "name" : "Mask",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CN",
+      "description" : "\n\t\t\tgod of thieves\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Black mask",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_KOL_KORRAN" : {
+      "name" : "Kol Korran",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of trade and wealth\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Nine-sided gold coin",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_GOND" : {
+      "name" : "Gond",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of craft\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Toothed cog with four spokes",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_RALISHAZ" : {
+      "name" : "Ralishaz",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CN",
+      "description" : "\n\t\t\tgod of ill luck and insanity\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Three bone fate-casting sticks",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_WEE_JAS" : {
+      "name" : "Wee Jas",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tgoddess of magic and death\n\t\t",
+      "domains" : [ "Death", " Knowledge" ],
+      "symbol" : "Red skull in front of fireball",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_THE_MOCKERY" : {
+      "name" : "The Mockery",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of violence and treachery\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Five blood-spattered tools",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_THE_SHADOW" : {
+      "name" : "The Shadow",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of dark magic\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Obsidian tower",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SUNE" : {
+      "name" : "Sune",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\tgoddess of love and beauty\n\t\t",
+      "domains" : [ "Life", " Light" ],
+      "symbol" : "Face of a beautiful red-haired woman",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_LOLTH" : {
+      "name" : "Lolth",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tdrow goddess of spiders\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Spider",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_KORD" : {
+      "name" : "Kord",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\tgod of athletics and sport\n\t\t",
+      "domains" : [ "Tempest", " War" ],
+      "symbol" : "Four spears and four maces radiating out from a central point",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MORGION" : {
+      "name" : "Morgion",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of disease and secrecy\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Hood with two red eyes",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_OBAD_HAI" : {
+      "name" : "Obad-Hai",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of nature\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Oak leaf and acorn",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_THE_TRAVELER" : {
+      "name" : "The Traveler",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CN",
+      "description" : "\n\t\t\tdeity of chaos and change\n\t\t",
+      "domains" : [ "Knowledge", " Trickery" ],
+      "symbol" : "Four crossed, rune-inscribed bones",
+      "gender" : ""
+    },
+    "ID_WOTC_PHB_DEITY_HRUGGEK" : {
+      "name" : "Hruggek",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tbugbear god of violence\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Morningstar",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_BOCCOB" : {
+      "name" : "Boccob",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of magic\n\t\t",
+      "domains" : [ "Knowledge" ],
+      "symbol" : "Eye within a pentagram",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_AURIL" : {
+      "name" : "Auril",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgoddess of winter\n\t\t",
+      "domains" : [ "Nature", " Tempest" ],
+      "symbol" : "Six-pointed snowflake",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_LAOGZED" : {
+      "name" : "Laogzed",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\ttroglodyte god of hunger\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Image of the lizard/toad god",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_LATHANDER" : {
+      "name" : "Lathander",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgod of birth and renewal\n\t\t",
+      "domains" : [ "Life", " Light" ],
+      "symbol" : "Road traveling into a sunrise",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_LLIIRA" : {
+      "name" : "Lliira",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\tgoddess of joy\n\t\t",
+      "domains" : [ "Life" ],
+      "symbol" : "Triangle of three six-pointed stars",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_MALAR" : {
+      "name" : "Malar",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CE",
+      "description" : "\n\t\t\tgod of the hunt\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Clawed paw",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_MISHAKAL" : {
+      "name" : "Mishakal",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgoddess of healing\n\t\t",
+      "domains" : [ "Knowledge", " Life" ],
+      "symbol" : "Blue infinity sign",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_TIAMAT" : {
+      "name" : "Tiamat",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tdragon goddess of evil\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Dragon head with five claw marks",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_SELUNE" : {
+      "name" : "Selune",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\tgoddess of the moon\n\t\t",
+      "domains" : [ "Knowledge", " Life" ],
+      "symbol" : "Pair of eyes surrounded by seven stars",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_TYR" : {
+      "name" : "Tyr",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgod of justice\n\t\t",
+      "domains" : [ "War" ],
+      "symbol" : "Balanced scales resting on a warhammer",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_CHEMOSH" : {
+      "name" : "Chemosh",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LE",
+      "description" : "\n\t\t\tgod of the undead\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Yellow skull",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_ELDATH" : {
+      "name" : "Eldath",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\tgoddess of peace\n\t\t",
+      "domains" : [ "Life", " Nature" ],
+      "symbol" : "Waterfall plunging into still pool",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_THE_PATH_OF_LIGHT" : {
+      "name" : "The Path of Light",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LN",
+      "description" : "\n\t\t\tphilosophy of light and self-improvement\n\t\t",
+      "domains" : [ "Life", " Light" ],
+      "symbol" : "Brilliant crystal",
+      "gender" : ""
+    },
+    "ID_WOTC_PHB_DEITY_DEEP_SASHELAS" : {
+      "name" : "Deep Sashelas",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "CG",
+      "description" : "\n\t\t\telf god of the sea\n\t\t",
+      "domains" : [ "Nature", " Tempest" ],
+      "symbol" : "Dolphin",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_BHAAL" : {
+      "name" : "Bhaal",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NE",
+      "description" : "\n\t\t\tgod of murder\n\t\t",
+      "domains" : [ "Death" ],
+      "symbol" : "Skull surrounded by a ring of blood droplets",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_DOL_ARRAH" : {
+      "name" : "Dol Arrah",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgoddess of sunlight and honor\n\t\t",
+      "domains" : [ "Light", " War" ],
+      "symbol" : "Rising sun",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_THE_UNDYING_COURT" : {
+      "name" : "The Undying Court",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "NG",
+      "description" : "\n\t\t\telven ancestors\n\t\t",
+      "domains" : [ "Knowledge", " Life" ],
+      "symbol" : "Varies",
+      "gender" : ""
+    },
+    "ID_WOTC_PHB_DEITY_YONDALLA" : {
+      "name" : "Yondalla",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\thalfling goddess of fertility and protection\n\t\t",
+      "domains" : [ "Life" ],
+      "symbol" : "Shield",
+      "gender" : "female"
+    },
+    "ID_WOTC_PHB_DEITY_GARL_GLITTERGOLD" : {
+      "name" : "Garl Glittergold",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "LG",
+      "description" : "\n\t\t\tgnome god of trickery and wiles\n\t\t",
+      "domains" : [ "Trickery" ],
+      "symbol" : "Gold nugget",
+      "gender" : "male"
+    },
+    "ID_WOTC_PHB_DEITY_SIRRION" : {
+      "name" : "Sirrion",
+      "type" : "Deity",
+      "source" : "Player’s Handbook",
+      "alignment" : "N",
+      "description" : "\n\t\t\tgod of fire and change\n\t\t",
+      "domains" : [ "Nature" ],
+      "symbol" : "Multi-colored fire",
+      "gender" : "male"
+    }
+  },
+  "feats" : {
+    "ID_PHB_FEAT_MAGIC_INITIATE_BARD" : {
+      "name" : "Bard",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou learn two cantrips of your choice from the bard’s spell list.\n\t\t\tIn addition, choose one 1st-level spell from that same list. You learn that spell and can cast it at its lowest level. Once you cast it, you must finish a long rest before you can cast it again.\n\t\t\tYour spellcasting ability for these spells is charisma.\n\t\t"
+    },
+    "ID_PHB_FEAT_RESILIENT_INTELLIGENCE" : {
+      "name" : "Resilient (Intelligence)",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYour Intelligence increases by 1.\n\t\t\tYou gain proficiency with Intelligence saving throws.\n\t\t"
+    },
+    "ID_PHB_FEAT_TOUGH" : {
+      "name" : "Tough",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYour hit points maximum increases by an amount equal to twice your level when you gain this feat. Whenever you gain a level thereafter, your hit points maximum increases by an additional 2 hit points.\n\t\t"
+    },
+    "ID_PHB_FEAT_DURABLE" : {
+      "name" : "Durable",
+      "type" : "Feat",
+      "description" : "\n\t\t\tHardy and resilient, you gain the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Constitution score by 1, to a maximum of 20.\n\t\t\t\tWhen you roll a Hit Die to regain hit points, the minimum number of hit points you regain from the roll equals twice your Constitution modifier (minimum of 2).\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_LINGUIST" : {
+      "name" : "Linguist",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have studied languages and codes, gaining the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Intelligence score by 1, to a maximum of 20.\n\t\t\t\tYou learn three languages of your choice.\n\t\t\t\tYou can ably create written ciphers. Others can’t decipher a code you create unless you teach them, they succeed on an Intelligence check (DC equal to your Intelligence score + your proficiency bonus), or they use magic to decipher it.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_MODERATELYARMORED" : {
+      "name" : "Moderately Armored",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Proficiency with light armor\n\t\t\tYou have trained to master the use of medium armor and shields, gaining the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Strength or Dexterity score by 1, to a maximum of 20.\n\t\t\t\tYou gain proficiency with medium armor and shields.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_RESILIENT_CHARISMA" : {
+      "name" : "Resilient (Charisma)",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYour Charisma increases by 1.\n\t\t\tYou gain proficiency with Charisma saving throws.\n\t\t"
+    },
+    "ID_PHB_FEAT_SENTINEL" : {
+      "name" : "Sentinel",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have mastered techniques to take advantage of every drop in any enemy’s guard, gaining the following benefits:\n\t\t\t\n\t\t\t\tWhen you hit a creature with an opportunity attack, the creature’s speed becomes 0 for the rest of the turn.\n\t\t\t\tCreatures provoke opportunity attacks from you even if they take the Disengage action before leaving your reach.\n\t\t\t\tWhen a creature within 5 feet of you makes an attack against a target other than you (and that target doesn’t have this feat), you can use your reaction to make a melee weapon attack against the attacking creature.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_DEFENSIVE_DUELIST" : {
+      "name" : "Defensive Duelist",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Dexterity 13 or higher\n\t\t\tWhen you are wielding a finesse weapon with which you are proficient and another creature hits you with a melee attack, you can use your reaction to add your proficiency bonus to your AC for that attack, potentially causing the attack to miss you.\n\t\t"
+    },
+    "ID_PHB_FEAT_HEAVILYARMORED" : {
+      "name" : "Heavily Armored",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Proficiency with medium armor\n\t\t\tYou have trained to master the use of heavy armor, gaining the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Strength score by 1, to a maximum of 20.\n\t\t\t\tYou gain proficiency with heavy armor.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_RITUAL_CASTER_SORCERER" : {
+      "name" : "Sorcerer",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou acquire a ritual book holding two 1st-level spells of your choice.\n\t\t\tYour spellcasting ability for these spells is charisma.\n\t\t"
+    },
+    "ID_PHB_FEAT_LUCKY" : {
+      "name" : "Lucky",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have inexplicable luck that seems to kick in at just the right moment.\n\t\t\tYou have 3 luck points. Whenever you make an attack roll, an ability check, or a saving throw, you can spend one luck point to roll an additional d20. You can choose to spend one of your luck points after you roll the die, but before the outcome is determined. You choose which of the d20s is used for the attack roll, ability check, or saving throw.\n\t\t\tYou can also spend one luck point when an attack roll is made against you. Roll a d20, and then choose whether the attack uses the attacker’s roll or yours.\n\t\t\tIf more than one creature spends a luck point to influence the outcome of a roll, the points cancel each other out; no additional dice are rolled.\n\t\t\tYou regain your expended luck points when you finish a long rest.\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_LIGHTNING" : {
+      "name" : "Lightning",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tSpells you cast ignore lightning resistance. In addition, when you roll damage for a spell you cast that deals lightning damage, you can treat any 1 on a damage die as a 2.\n\t\t"
+    },
+    "ID_PHB_FEAT_RITUAL_CASTER_CLERIC" : {
+      "name" : "Cleric",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou acquire a ritual book holding two 1st-level spells of your choice.\n\t\t\tYour spellcasting ability for these spells is wisdom.\n\t\t"
+    },
+    "ID_PHB_FEAT_KEENMIND" : {
+      "name" : "Keen Mind",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have a mind that can track time, direction, and detail with uncanny precision. You gain the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Intelligence score by 1, to a maximum of 20.\n\t\t\t\tYou always know which way is north.\n\t\t\t\tYou always know the number of hours left before the next sunrise or sunset.\n\t\t\t\tYou can accurately recall anything you have seen or heard within the past month.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_RESILIENT_STRENGTH" : {
+      "name" : "Resilient (Strength)",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYour Strength increases by 1.\n\t\t\tYou gain proficiency with Strength saving throws.\n\t\t"
+    },
+    "ID_PHB_FEAT_RITUAL_CASTER_WIZARD" : {
+      "name" : "Wizard",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou acquire a ritual book holding two 1st-level spells of your choice.\n\t\t\tYour spellcasting ability for these spells is intelligence.\n\t\t"
+    },
+    "ID_PHB_FEAT_SKULKER" : {
+      "name" : "Skulker",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Dexterity 13 or higher\n\t\t\tYou are expert at slinking through shadows. You gain the following benefits:\n\t\t\t\n\t\t\t\tYou can try to hide when you are lightly obscured from the creature from which you are hiding.\n\t\t\t\tWhen you are hidden from a creature and miss it with a ranged weapon attack, making the attack doesn’t reveal your position.\n\t\t\t\tDim light doesn’t impose disadvantage on your Wisdom (Perception) checks relying on sight.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_MEDIUMARMORMASTER" : {
+      "name" : "Medium Armor Master",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Proficiency with medium armor\n\t\t\tYou have practiced moving in medium armor to gain the following benefits:\n\t\t\t\n\t\t\t\tWearing medium armor doesn’t impose disadvantage on your Dexterity (Stealth) checks.\n\t\t\t\tWhen you wear medium armor, you can add 3, rather than 2, to your AC if you have a Dexterity of 16 or higher.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_RESILIENT_DEXTERITY" : {
+      "name" : "Resilient (Dexterity)",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYour Dexterity increases by 1.\n\t\t\tYou gain proficiency with Dexterity saving throws.\n\t\t"
+    },
+    "ID_PHB_FEAT_DUALWIELDER" : {
+      "name" : "Dual Wielder",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou master fighting with two weapons, gaining the following benefits:\n\t\t\t\n\t\t\t\tYou gain a +1 bonus to AC while you are wielding a separate melee weapon in each hand.\n\t\t\t\tYou can use two-weapon fighting even when the one-handed melee weapons you are wielding aren’t light.\n\t\t\t\tYou can draw or stow two one-handed weapons when you would normally be able to draw or stow only one.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_COLD" : {
+      "name" : "Cold",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tSpells you cast ignore cold resistance. In addition, when you roll damage for a spell you cast that deals cold damage, you can treat any 1 on a damage die as a 2.\n\t\t"
+    },
+    "ID_PHB_FEAT_TAVERNBRAWLER" : {
+      "name" : "Tavern Brawler",
+      "type" : "Feat",
+      "description" : "\n\t\t\tAccustomed to rough-and-tumble fighting using whatever weapons happen to be at hand, you gain the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Strength or Constitution score by 1, to a maximum of 20.\n\t\t\t\tYou are proficient with improvised weapons.\n\t\t\t\tYour unarmed strike uses a d4 for damage.\n\t\t\t\tWhen you hit a creature with an unarmed strike or an improvised weapon on your turn, you can use a bonus action to attempt to grapple the target.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_DUNGEON_DELVER" : {
+      "name" : "Dungeon Delver",
+      "type" : "Feat",
+      "description" : "\n\t\t\tAlert to the hidden traps and secret doors found in many dungeons, you gain the following benefits:\n\t\t\t\n\t\t\t\tYou have advantage on Wisdom (Perception) and Intelligence (Investigation) checks made to detect the presence of secret doors.\n\t\t\t\tYou have advantage on saving throws made to avoid or resist traps.\n\t\t\t\tYou have resistance to the damage dealt by traps.\n\t\t\t\tTraveling at a fast pace doesn’t impose the normal ?5 penalty on your passive Wisdom (Perception) score.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_MAGIC_INITIATE_DRUID" : {
+      "name" : "Druid",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou learn two cantrips of your choice from the druid spell list.\n\t\t\tIn addition, choose one 1st-level spell from that same list. You learn that spell and can cast it at its lowest level. Once you cast it, you must finish a long rest before you can cast it again.\n\t\t\tYour spellcasting ability for these spells is wisdom.\n\t\t"
+    },
+    "ID_PHB_FEAT_RITUALCASTER" : {
+      "name" : "Ritual Caster",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Intelligence or Wisdom 13 or higher\n\t\t\tYou have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them.\n\t\t\tWhen you choose this feat, you acquire a ritual book holding two 1st-level spells of your choice. Choose one of the following classes: bard, cleric, druid, sorcerer, warlock, or wizard. You must choose your spells from that class’s spell list, and the spells you choose must have the ritual tag. The class you choose also determines your spellcasting ability for these spells: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard.\n\t\t\tIf you come across a spell in written form, such as a magical spell scroll or a wizard’s spellbook, you might be able to add it to your ritual book. The spell must be on the spell list for the class you chose, the spell’s level can be no higher than half your level (rounded up), and it must have the ritual tag. The process of copying the spell into your ritual book takes 2 hours per level of the spell, and costs 50 gp per level. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it.\n\t\t"
+    },
+    "ID_PHB_FEAT_ALERT" : {
+      "name" : "Alert",
+      "type" : "Feat",
+      "description" : "\n\t\t\tAlways on the lookout for danger, you gain the following benefits:\n\t\t\t\n\t\t\t\tYou gain a +5 bonus to initiative.\n\t\t\t\tYou can’t be surprised while you are conscious.\n\t\t\t\tOther creatures don’t gain advantage on attack rolls against you as a result of being unseen by you.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT" : {
+      "name" : "Elemental Adept",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: The ability to cast at least one spell\n\t\t\tWhen you gain this feat, choose one of the following damage types: acid, cold, fire, lightning, or thunder.\n\t\t\tSpells you cast ignore resistance to damage of the chosen type. In addition, when you roll damage for a spell you cast that deals damage of that type, you can treat any 1 on a damage die as a 2.\n\t\t\tYou can select this feat multiple times. Each time you do so, you must choose a different damage type.\n\t\t"
+    },
+    "ID_PHB_FEAT_SHARPSHOOTER" : {
+      "name" : "Sharpshooter",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have mastered ranged weapons and can make shots that others find impossible. You gain the following benefits:\n\t\t\t\n\t\t\t\tAttacking at long range doesn’t impose disadvantage on your ranged weapon attack rolls.\n\t\t\t\tYour ranged weapon attacks ignore half cover and three-quarters cover.\n\t\t\t\tBefore you make an attack with a ranged weapon that you are proficient with, you can choose to take a - 5 penalty to the attack roll. If the attack hits, you add +10 to the attack’s damage.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_WARCASTER" : {
+      "name" : "War Caster",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: The ability to cast at least one spell\n\t\t\tYou have practiced casting spells in the midst of combat, learning techniques that grant you the following benefits:\n\t\t\t\n\t\t\t\tYou have advantage on Constitution saving throws that you make to maintain your concentration on a spell when you take damage.\n\t\t\t\tYou can perform the somatic components of spells even when you have weapons or a shield in one or both hands.\n\t\t\t\tWhen a hostile creature’s movement provokes an opportunity attack from you, you can use your reaction to cast a spell at the creature, rather than making an opportunity attack. The spell must have a casting time of 1 action and must target only that creature.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_ATHLETE" : {
+      "name" : "Athlete",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have undergone extensive physical training to gain the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Strength or Dexterity score by 1, to a maximum of 20.\n\t\t\t\tWhen you are prone, standing up uses only 5 feet of your movement.\n\t\t\t\tClimbing doesn’t cost you extra movement.\n\t\t\t\tYou can make a running long jump or a running high jump after moving only 5 feet on foot, rather than 10 feet.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_MARTIALADEPT" : {
+      "name" : "Martial Adept",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have martial training that allows you to perform special combat maneuvers. You gain the following benefits:\n\t\t\t\n\t\t\t\tYou learn two maneuvers of your choice from among those available to the Battle Master archetype in the fighter class. If a maneuver you use requires your target to make a saving throw to resist the maneuver’s effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice).\n\t\t\t\tYou gain one superiority die, which is a d6 (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_CHARGER" : {
+      "name" : "Charger",
+      "type" : "Feat",
+      "description" : "\n\t\t\tWhen you use your action to Dash, you can use a bonus action to make one melee weapon attack or to shove a creature.\n\t\t\tIf you move at least 10 feet in a straight line immediately before taking this bonus action, you either gain a +5 bonus to the attack’s damage roll (if you chose to make a melee attack and hit) or push the target up to 10 feet away from you (if you chose to shove and you succeed).\n\t\t"
+    },
+    "ID_PHB_FEAT_LIGHTLYARMORED" : {
+      "name" : "Lightly Armored",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have trained to master the use of light armor, gaining the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Strength or Dexterity score by 1, to a maximum of 20.\n\t\t\t\tYou gain proficiency with light armor.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_ACTOR" : {
+      "name" : "Actor",
+      "type" : "Feat",
+      "description" : "\n\t\t\tSkilled at mimicry and dramatics, you gain the following benefits\n\t\t\t\n\t\t\t\tIncrease your Charisma score by 1, to a maximum of 20.\n\t\t\t\tYou have advantage on Charisma (Deception) and Charisma (Performance) checks when trying to pass yourself off as a different person.\n\t\t\t\tYou can mimic the speech of another person or the sounds made by other creatures. You must have heard the person speaking, or heard the creature make the sound, for at least 1 minute. A successful Wisdom (Insight) check contested by your Charisma (Deception) check allows a listener to determine that the effect is faked.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_MAGIC_INITIATE_SORCERER" : {
+      "name" : "Sorcerer",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou learn two cantrips of your choice from the sorcerer’s spell list.\n\t\t\tIn addition, choose one 1st-level spell from that same list. You learn that spell and can cast it at its lowest level. Once you cast it, you must finish a long rest before you can cast it again.\n\t\t\tYour spellcasting ability for these spells is charisma.\n\t\t"
+    },
+    "ID_PHB_FEAT_MAGIC_INITIATE_WIZARD" : {
+      "name" : "Wizard",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou learn two cantrips of your choice from the wizard’s spell list.\n\t\t\tIn addition, choose one 1st-level spell from that same list. You learn that spell and can cast it at its lowest level. Once you cast it, you must finish a long rest before you can cast it again.\n\t\t\tYour spellcasting ability for these spells is intelligence.\n\t\t"
+    },
+    "ID_PHB_FEAT_SPELLSNIPER" : {
+      "name" : "Spell Sniper",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: The ability to cast at least one spell\n\t\t\tYou have learned techniques to enhance your attacks with certain kinds of spells, gaining the following benefits:\n\t\t\t\n\t\t\t\tWhen you cast a spell that requires you to make an attack roll, the spell’s range is doubled.\n\t\t\t\tYour ranged spell attacks ignore half cover and three-quarters cover.\n\t\t\t\tYou learn one cantrip that requires an attack roll. Choose the cantrip from the bard, cleric, druid, sorcerer, warlock, or wizard spell list. Your spellcasting ability for this cantrip depends on the spell list you chose from: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_THUNDER" : {
+      "name" : "Thunder",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tSpells you cast ignore thunder resistance. In addition, when you roll damage for a spell you cast that deals thunder damage, you can treat any 1 on a damage die as a 2.\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_ACID" : {
+      "name" : "Acid",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tSpells you cast ignore acid resistance. In addition, when you roll damage for a spell you cast that deals acid damage, you can treat any 1 on a damage die as a 2.\n\t\t"
+    },
+    "ID_PHB_FEAT_RESILIENT_WISDOM" : {
+      "name" : "Resilient (Wisdom)",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYour Wisdom increases by 1.\n\t\t\tYou gain proficiency with Wisdom saving throws.\n\t\t"
+    },
+    "ID_PHB_FEAT_MAGICINITIATE" : {
+      "name" : "Magic Initiate",
+      "type" : "Feat",
+      "description" : "\n\t\t\tChoose a class: bard, cleric, druid, sorcerer, warlock, or wizard. You learn two cantrips of your choice from that class’s spell list.\n\t\t\tIn addition, choose one 1st-level spell to learn from that same list. Using this feat, you can cast the spell once at its lowest level, and you must finish a long rest before you can cast it in this way again.\n\t\t\tYour spellcasting ability for these spells depends on the class you chose: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid: or Intelligence for wizard.\n\t\t"
+    },
+    "ID_PHB_FEAT_RESILIENT" : {
+      "name" : "Resilient",
+      "type" : "Feat",
+      "description" : "\n\t\t\tChoose one ability score. You gain the following benefits:\n\t\t\t\n\t\t\t\tIncrease the chosen ability score by 1, to a maximum of 20.\n\t\t\t\tYou gain proficiency in saving throws using the chosen ability.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_INSPIRINGLEADER" : {
+      "name" : "Inspiring Leader",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Charisma 13 or higher\n\t\t\tYou can spend 10 minutes inspiring your companions, shoring up their resolve to fight. When you do so, choose up to six friendly creatures (which can include yourself) within 30 feet of you who can see or hear you and who can understand you. Each creature can gain temporary hit points equal to your level + your Charisma modifier. A creature can’t gain temporary hit points from this feat again until it has finished a short or long rest.\n\t\t"
+    },
+    "ID_PHB_FEAT_MOBILE" : {
+      "name" : "Mobile",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou are exceptionally speedy and agile. You gain the following benefits:\n\t\t\t\n\t\t\t\tYour speed increases by 10 feet.\n\t\t\t\tWhen you use the Dash action, difficult terrain doesn’t cost you extra movement on that turn.\n\t\t\t\tWhen you make a melee attack against a creature, you don’t provoke opportunity attacks from that creature for the rest of the turn, whether you hit or not.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_RITUAL_CASTER_DRUID" : {
+      "name" : "Druid",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou acquire a ritual book holding two 1st-level spells of your choice.\n\t\t\tYour spellcasting ability for these spells is wisdom.\n\t\t"
+    },
+    "ID_PHB_FEAT_RITUAL_CASTER_WARLOCK" : {
+      "name" : "Warlock",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou acquire a ritual book holding two 1st-level spells of your choice.\n\t\t\tYour spellcasting ability for these spells is charisma.\n\t\t"
+    },
+    "ID_PHB_FEAT_MAGIC_INITIATE_CLERIC" : {
+      "name" : "Cleric",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou learn two cantrips of your choice from the cleric’s spell list.\n\t\t\tIn addition, choose one 1st-level spell from that same list. You learn that spell and can cast it at its lowest level. Once you cast it, you must finish a long rest before you can cast it again.\n\t\t\tYour spellcasting ability for these spells is wisdom.\n\t\t"
+    },
+    "ID_PHB_FEAT_SKILLED" : {
+      "name" : "Skilled",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou gain proficiency in any combination of three skills or tools of your choice.\n\t\t"
+    },
+    "ID_PHB_FEAT_WEAPONMASTER" : {
+      "name" : "Weapon Master",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have practiced extensively with a variety of weapons, gaining the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Strength or Dexterity score by 1, to a maximum of 20.\n\t\t\t\tYou gain proficiency with four weapons of your choice. Each one must be a simple or a martial weapon.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_POLEARMMASTER" : {
+      "name" : "Polearm Master",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou can keep your enemies at bay with reach weapons. You gain the following benefits:\n\t\t\t\n\t\t\t\tWhen you take the Attack action and attack with only a glaive, halberd, quarterstaff, or spear, you can use a bonus action to make a melee attack with the opposite end of the weapon. The weapon’s damage die for this attack is a d4, and the attack deals bludgeoning damage. This attack uses the same ability modifier as the primary attack. \n\t\t\t\tWhile you are wielding a glaive, halberd, pike, quarterstaff, or spear, other creatures provoke an opportunity attack from you when they enter your reach.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_MOUNTEDCOMBATANT" : {
+      "name" : "Mounted Combatant",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou are a dangerous foe to face while mounted. While you are mounted and aren’t incapacitated, you gain the following benefits:\n\t\t\t\n\t\t\t\tYou have advantage on melee attack rolls against any unmounted creature that is smaller than your mount.\n\t\t\t\tYou can force an attack targeted at your mount to target you instead.\n\t\t\t\tIf your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_GRAPPLER" : {
+      "name" : "Grappler",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Strength 13 or higher\n\t\t\tYou’ve developed the skills necessary to hold your own in close-quarters grappling. You gain the following benefits:\n\t\t\t\n\t\t\t\tYou have advantage on attack rolls against a creature you are grappling.\n\t\t\t\tYou can use your action to try to pin a creature grappled by you. To do so, make another grapple check. If you succeed, you and the creature are both restrained until the grapple ends.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_GREATWEAPONMASTER" : {
+      "name" : "Great Weapon Master",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou’ve learned to put the weight of a weapon to your advantage, letting its momentum empower your strikes. You gain the following benefits:\n\t\t\t\n\t\t\t\tOn your turn, when you score a critical hit with a melee weapon or reduce a creature to 0 hit points with one, you can make one melee weapon attack as a bonus action.\n\t\t\t\tBefore you make a melee attack with a heavy weapon that you are proficient with, you can choose to take a - 5 penalty to the attack roll. If the attack hits, you add +10 to the attack’s damage.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_MAGESLAYER" : {
+      "name" : "Mage Slayer",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou have practiced techniques useful in melee combat against spellcasters, gaining the following benefits:\n\t\t\t\n\t\t\t\tWhen a creature within 5 feet of you casts a spell, you can use your reaction to make a melee weapon attack against that creature.\n\t\t\t\tWhen you damage a creature that is concentrating on a spell, that creature has disadvantage on the saving throw it makes to maintain its concentration.\n\t\t\t\tYou have advantage on saving throws against spells cast by creatures within 5 feet of you.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_HEALER" : {
+      "name" : "Healer",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou are an able physician, allowing you to mend wounds quickly and get your allies back in the fight. You gain the following benefits:\n\t\t\t\n\t\t\t\tWhen you use a healer’s kit to stabilize a dying creature, that creature also regains 1 hit point.\n\t\t\t\tAs an action, you can spend one use of a healer’s kit to tend to a creature and restore 1d6 + 4 hit points to it, plus additional hit points equal to the creature’s maximum number of Hit Dice. The creature can’t regain hit points from this feat again until it finishes a short or long rest.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_RITUAL_CASTER_BARD" : {
+      "name" : "Bard",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou acquire a ritual book holding two 1st-level spells of your choice.\n\t\t\tYour spellcasting ability for these spells is charisma.\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_2" : {
+      "name" : "Elemental Adept",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: The ability to cast at least one spell\n\t\t\tWhen you gain this feat, choose one of the following damage types: acid, cold, fire, lightning, or thunder.\n\t\t\tSpells you cast ignore resistance to damage of the chosen type. In addition, when you roll damage for a spell you cast that deals damage of that type, you can treat any 1 on a damage die as a 2.\n\t\t\tYou can select this feat multiple times. Each time you do so, you must choose a different damage type.\n\t\t"
+    },
+    "ID_PHB_FEAT_SAVAGEATTACKER" : {
+      "name" : "Savage Attacker",
+      "type" : "Feat",
+      "description" : "\n\t\t\tOnce per turn when you roll damage for a melee weapon attack, you can reroll the weapon's damage dice as use either total.\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_4" : {
+      "name" : "Elemental Adept",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: The ability to cast at least one spell\n\t\t\tWhen you gain this feat, choose one of the following damage types: acid, cold, fire, lightning, or thunder.\n\t\t\tSpells you cast ignore resistance to damage of the chosen type. In addition, when you roll damage for a spell you cast that deals damage of that type, you can treat any 1 on a damage die as a 2.\n\t\t\tYou can select this feat multiple times. Each time you do so, you must choose a different damage type.\n\t\t"
+    },
+    "ID_PHB_FEAT_MAGIC_INITIATE_WARLOCK" : {
+      "name" : "Warlock",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYou learn two cantrips of your choice from the warlock’s spell list.\n\t\t\tIn addition, choose one 1st-level spell from that same list. You learn that spell and can cast it at its lowest level. Once you cast it, you must finish a long rest before you can cast it again.\n\t\t\tYour spellcasting ability for these spells is charisma.\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_3" : {
+      "name" : "Elemental Adept",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: The ability to cast at least one spell\n\t\t\tWhen you gain this feat, choose one of the following damage types: acid, cold, fire, lightning, or thunder.\n\t\t\tSpells you cast ignore resistance to damage of the chosen type. In addition, when you roll damage for a spell you cast that deals damage of that type, you can treat any 1 on a damage die as a 2.\n\t\t\tYou can select this feat multiple times. Each time you do so, you must choose a different damage type.\n\t\t"
+    },
+    "ID_PHB_FEAT_HEAVYARMORMASTER" : {
+      "name" : "Heavy Armor Master",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: Proficiency with heavy armor\n\t\t\tYou can use your armor to deflect strikes that would kill others. You gain the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Strength score by 1, to a maximum of 20.\n\t\t\t\tWhile you are wearing heavy armor, bludgeoning, piercing, and slashing damage that you take from non magical weapons is reduced by 3.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_5" : {
+      "name" : "Elemental Adept",
+      "type" : "Feat",
+      "description" : "\n\t\t\tPrerequisite: The ability to cast at least one spell\n\t\t\tWhen you gain this feat, choose one of the following damage types: acid, cold, fire, lightning, or thunder.\n\t\t\tSpells you cast ignore resistance to damage of the chosen type. In addition, when you roll damage for a spell you cast that deals damage of that type, you can treat any 1 on a damage die as a 2.\n\t\t\tYou can select this feat multiple times. Each time you do so, you must choose a different damage type.\n\t\t"
+    },
+    "ID_PHB_FEAT_SHIELDMASTER" : {
+      "name" : "Shield Master",
+      "type" : "Feat",
+      "description" : "\n\t\t\tYou use shields not just for protection but also for offense. You gain the following benefits while you are wielding a shield:\n\t\t\t\n\t\t\t\tIf you take the Attack action on your turn, you can use a bonus action to try to shove a creature within 5 feet of you with your shield.\n\t\t\t\tIf you aren’t incapacitated, you can add your shield’s AC bonus to any Dexterity saving throw you make against a spell or other harmful effect that targets only you.\n\t\t\t\tIf you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can use your reaction to take no damage if you succeed on the saving throw, interposing your shield between yourself and the source of the effect.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_ELEMENTAL_ADEPT_FIRE" : {
+      "name" : "Fire",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tSpells you cast ignore fire resistance. In addition, when you roll damage for a spell you cast that deals fire damage, you can treat any 1 on a damage die as a 2.\n\t\t"
+    },
+    "ID_PHB_FEAT_RESILIENT_CONSTITUTION" : {
+      "name" : "Resilient (Constitution)",
+      "type" : "Feat Feature",
+      "description" : "\n\t\t\tYour Constitution increases by 1.\n\t\t\tYou gain proficiency with Constitution saving throws.\n\t\t"
+    },
+    "ID_PHB_FEAT_OBSERVANT" : {
+      "name" : "Observant",
+      "type" : "Feat",
+      "description" : "\n\t\t\tQuick to notice details of your environment, you gain the following benefits:\n\t\t\t\n\t\t\t\tIncrease your Intelligence or Wisdom score by 1, to a maximum of 20.\n\t\t\t\tIf you can see a creature’s mouth while it is speaking a language you understand, you can interpret what it’s saying by reading its lips.\n\t\t\t\tYou have a +5 bonus to your passive Wisdom (Perception) and passive Intelligence (Investigation) scores.\n\t\t\t\n\t\t"
+    },
+    "ID_PHB_FEAT_CROSSBOWEXPERT" : {
+      "name" : "Crossbow Expert",
+      "type" : "Feat",
+      "description" : "\n\t\t\tThanks to extensive practice with the crossbow, you gain the following benefits:\n\t\t\t\n\t\t\t\tYou ignore the loading quality of crossbows with which you are proficient.\n\t\t\t\tBeing within 5 feet of a hostile creature doesn’t impose disadvantage on your ranged attack rolls.\n\t\t\t\tWhen you use the Attack action and attack with a one-handed weapon, you can use a bonus action to attack with a hand crossbow you are holding.\n\t\t\t\t\t\t\n\t\t"
     }
   }
 }

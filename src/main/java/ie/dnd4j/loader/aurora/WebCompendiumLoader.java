@@ -3,6 +3,7 @@ package ie.dnd4j.loader.aurora;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,14 +23,18 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import ie.dnd4j.Compendium;
+import ie.dnd4j.character.Alignment;
 import ie.dnd4j.configuration.CompendiumConfiguration;
 import ie.dnd4j.configuration.CompendiumSourcesConfiguration;
+import ie.dnd4j.feats.ClassFeature;
+import ie.dnd4j.feats.Feat;
 import ie.dnd4j.items.Armour;
 import ie.dnd4j.items.ArmourType;
 import ie.dnd4j.items.Item;
 import ie.dnd4j.items.Weapon;
 import ie.dnd4j.loader.CompendiumLoader;
 import ie.dnd4j.race.Race;
+import ie.dnd4j.religion.Deity;
 import ie.dnd4j.rules.dependencies.StrengthDependency;
 import ie.dnd4j.rules.stats.ArmourClassRule;
 import ie.dnd4j.rules.stats.RacialAbilityModifier;
@@ -49,7 +54,6 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	compendium = new Compendium();
 	compendium.setSource("Aurora");
     }
-
 
     @Override
     public void loadCompendiums() {
@@ -85,6 +89,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 
     /**
      * Default encoding of UTF-8
+     * 
      * @param xml
      * @return
      */
@@ -94,6 +99,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 
     /***
      * Parse the XML body from the end point
+     * 
      * @param xml
      * @param encoding
      * @return an XML Document
@@ -124,6 +130,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 
     /**
      * Build the compendium from our XML documents
+     * 
      * @param documents
      */
     private void buildCompendium(Map<String, Document> documents) {
@@ -143,10 +150,9 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	});
     }
 
-    
-    
     /***
      * Process an element node
+     * 
      * @param element
      */
     private void processNode(Element element) {
@@ -158,8 +164,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	String type = element.getAttribute("type");
 	String source = element.getAttribute("source");
 	String id = element.getAttribute("id");
-	
-	
+
 	Element description = DomUtils.getChildElementByTagName(element, "description");
 	String descriptionText = getDescription(description);
 
@@ -178,7 +183,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 		}
 	    });
 	}
-	
+
 	List<Element> rules = DomUtils.getChildElementsByTagName(element, "rules");
 	for (Element e : rules) {
 	    List<Element> stat = DomUtils.getChildElementsByTagName(e, "stat");
@@ -219,16 +224,16 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    armour.setType(type);
 	    armour.setArmour(attributes.get("armor"));
 	    armour.tag(id);
-	    
-    	    int ac =  convertNumber(stats.get("ac:armored:armor"));
-    	    
-    	    ArmourClassRule rule = new ArmourClassRule(ac, ArmourType.forString(armour.getArmour()));
-    	    String check = attributes.get("strength");
-    	    if(check != null) {
-    		int strengthCheck = convertNumber(attributes.get("strength"));
-    	    	rule.addDependency(new StrengthDependency(strengthCheck));
-    	    }
-    	    
+
+	    int ac = convertNumber(stats.get("ac:armored:armor"));
+
+	    ArmourClassRule rule = new ArmourClassRule(ac, ArmourType.forString(armour.getArmour()));
+	    String check = attributes.get("strength");
+	    if (check != null) {
+		int strengthCheck = convertNumber(attributes.get("strength"));
+		rule.addDependency(new StrengthDependency(strengthCheck));
+	    }
+
 	    armour.addRule(rule);
 	    this.compendium.getItems().put(id, armour);
 	    break;
@@ -282,19 +287,51 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    int intelligence = convertNumber(stats.get("intelligence"));
 	    int wisdom = convertNumber(stats.get("wisdom"));
 	    int charisma = convertNumber(stats.get("charisma"));
-	    RacialAbilityModifier abilityModifier = new RacialAbilityModifier(strength, dexterity, constitution, intelligence, wisdom, charisma);
+	    RacialAbilityModifier abilityModifier = new RacialAbilityModifier(strength, dexterity, constitution,
+		    intelligence, wisdom, charisma);
 	    race.setRacialAbilityModifier(abilityModifier);
 	    this.compendium.getRaces().put(id, race);
 	    break;
+	case "deity":
+	    Deity deity = new Deity();
+	    deity.setName(name);
+	    deity.setSource(source);
+	    deity.setType(type);
+	    deity.setDescription(descriptionText);
+	    deity.setAlignment(Alignment.forTag(attributes.get("alignment")));
+	    deity.setDomains(listForString(attributes.get("domains")));
+	    deity.setGender(attributes.get("gender"));
+	    deity.setSymbol(attributes.get("symbol"));
+	    deity.tag(id);
+	    this.compendium.getDeities().put(id, deity);
+	    break;
+	case "feat":
+	    Feat feat = new Feat();
+	    feat.setName(name);
+	    feat.setDescription(descriptionText);
+	    feat.setType(type);
+	    this.compendium.getFeats().put(id, feat);
+	    break;
+	case "feat feature":
+	    ClassFeature feature = new ClassFeature();
+	    feature.setName(name);
+	    feature.setDescription(descriptionText);
+	    feature.setType(type);
+	    this.compendium.getFeats().put(id, feature);
+	    break;
 	default:
 	    break;
-	
+
 	}
 
     }
-    
+
+    private List<String> listForString(String list) {
+	return Arrays.asList(list.split(","));
+    }
+
     private int convertNumber(String value) {
-	if(value == null) {
+	if (value == null) {
 	    return 0;
 	} else {
 	    try {
@@ -303,11 +340,11 @@ public class WebCompendiumLoader implements CompendiumLoader {
 		return 0;
 	    }
 	}
-	
+
     }
-    
+
     private String getDescription(Element description) {
-	if(description == null) {
+	if (description == null) {
 	    return "";
 	}
 	return description.getTextContent();
