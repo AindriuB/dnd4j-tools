@@ -12,7 +12,20 @@ compendiums:
       race-halforc: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-halforc.xml
       race-human: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-human.xml
       race-tiefling: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-tiefling.xml
-      items-armor.xml: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-armor.xml
+      background-acolyte: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-acolyte.xml
+      background-charlatan: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-charlatan.xml
+      background-criminal: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-criminal.xml
+      background-entertainer: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-entertainer.xml
+      background-folkhero: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-folkhero.xml
+      background-guildartisan: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-guildartisan.xml
+      background-hermit: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-hermit.xml
+      background-noble: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-noble.xml
+      background-outlander: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-outlander.xml
+      background-sage: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-sage.xml
+      background-sailer: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-sailer.xml
+      background-soldier: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-soldier.xml
+      background-urchin: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/backgrounds/background-urchin.xml
+      items-armor: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-armor.xml
       items-weapons: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-weapons.xml
       items-gear: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-gear.xml
       items-packs: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/items/items-packs.xml

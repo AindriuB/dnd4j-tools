@@ -3,6 +3,7 @@ package ie.dnd4j.loader.aurora;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -25,9 +26,9 @@ import org.xml.sax.SAXException;
 import ie.dnd4j.Compendium;
 import ie.dnd4j.abilities.Ability;
 import ie.dnd4j.character.Alignment;
+import ie.dnd4j.character.background.Background;
 import ie.dnd4j.configuration.CompendiumConfiguration;
 import ie.dnd4j.configuration.CompendiumSourcesConfiguration;
-import ie.dnd4j.feats.ClassFeature;
 import ie.dnd4j.feats.Feat;
 import ie.dnd4j.items.Armour;
 import ie.dnd4j.items.ArmourType;
@@ -160,14 +161,16 @@ public class WebCompendiumLoader implements CompendiumLoader {
 
 	Map<String, String> attributes = new HashMap<String, String>();
 	Map<String, String> stats = new HashMap<String, String>();
+	Map<String, List<String>> select = new HashMap<String, List<String>>();
+	
 
 	String name = element.getAttribute("name");
 	String type = element.getAttribute("type");
 	String source = element.getAttribute("source");
 	String id = element.getAttribute("id");
 
-	Element description = DomUtils.getChildElementByTagName(element, "description");
-	String descriptionText = getDescription(description);
+	Element descriptionElement = DomUtils.getChildElementByTagName(element, "description");
+	String description = getDescription(descriptionElement);
 
 	List<Element> setters = DomUtils.getChildElementsByTagName(element, "setters");
 	for (Element e : setters) {
@@ -191,6 +194,17 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    stat.stream().forEach(node -> {
 		stats.put(node.getAttribute("name").toLowerCase(), node.getAttribute("value"));
 	    });
+	    
+	    List<Element> selects = DomUtils.getChildElementsByTagName(e, "select");
+	    selects.stream().forEach(node ->{
+		String selectName =  node.getAttribute("name");
+		select.put(selectName, new ArrayList<String>());
+		List<Element> options =  DomUtils.getChildElementsByTagName(node, "item");
+		options.stream().forEach(childNode -> {
+		    select.get(selectName).add(DomUtils.getTextValue(childNode));
+		});
+	    });
+	    
 	}
 
 	switch (type.toLowerCase()) {
@@ -198,7 +212,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    Item tools = new Item();
 	    tools.setCost(Integer.valueOf(attributes.get("cost")));
 	    tools.setName(name);
-	    tools.setDescription(descriptionText);
+	    tools.setDescription(description);
 	    tools.setProficiency(attributes.get("proficiency"));
 	    tools.setSource(source);
 	    tools.setWeight(attributes.get("weight"));
@@ -213,7 +227,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	case "armor":
 	    Armour armour = new Armour();
 	    armour.setCost(Integer.valueOf(attributes.get("cost")));
-	    armour.setDescription(descriptionText);
+	    armour.setDescription(description);
 	    armour.setName(name);
 	    armour.setProficiency(attributes.get("proficiency"));
 	    armour.setSource(source);
@@ -240,7 +254,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    break;
 	case "weapon":
 	    Weapon weapon = new Weapon();
-	    weapon.setDescription(descriptionText);
+	    weapon.setDescription(description);
 	    weapon.setCost(Integer.valueOf(attributes.get("cost")));
 	    weapon.setName(name);
 	    weapon.setProficiency(attributes.get("proficiency"));
@@ -260,7 +274,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    break;
 	case "spell":
 	    Spell spell = new Spell();
-	    spell.setDescription(descriptionText);
+	    spell.setDescription(description);
 	    spell.setName(name);
 	    spell.setCastTime(attributes.get("time"));
 	    spell.setClasses("");
@@ -279,7 +293,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    break;
 	case "race":
 	    Race race = new Race();
-	    race.setDescription(descriptionText);
+	    race.setDescription(description);
 	    race.setName(name);
 	    race.setSpeed(convertNumber(stats.get("innate speed")));
 	    int strength = convertNumber(stats.get("strength"));
@@ -298,7 +312,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    deity.setName(name);
 	    deity.setSource(source);
 	    deity.setType(type);
-	    deity.setDescription(descriptionText);
+	    deity.setDescription(description);
 	    deity.setAlignment(Alignment.forTag(attributes.get("alignment")));
 	    deity.setDomains(listForString(attributes.get("domains")));
 	    deity.setGender(attributes.get("gender"));
@@ -309,16 +323,26 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	case "feat":
 	    Feat feat = new Feat();
 	    feat.setName(name);
-	    feat.setDescription(descriptionText);
+	    feat.setDescription(description);
 	    feat.setType(type);
 	    this.compendium.getFeats().put(id, feat);
 	    break;
 	case "feat feature":
-	    ClassFeature feature = new ClassFeature();
+	    Feat feature = new Feat();
 	    feature.setName(name);
-	    feature.setDescription(descriptionText);
+	    feature.setDescription(description);
 	    feature.setType(type);
 	    this.compendium.getFeats().put(id, feature);
+	    break;
+	case "background":
+	    Background background = new Background();
+	    background.setName(name);
+	    background.setDescription(description);
+	    background.setPersonality(select.get("Personality Trait"));
+	    background.setIdeal(select.get("Ideal"));
+	    background.setBond(select.get("Bond"));
+	    background.setFlaw(select.get("Flaw"));
+	    this.compendium.getBackgrounds().put(id, background);
 	    break;
 	default:
 	    break;
