@@ -20,52 +20,86 @@ public class CompendiumSourceLoader extends XMLReader {
     private CompendiumSourcesConfiguration compendiumConfiguration;
 
     private RestTemplate restTemplate;
-    
-    public Map<String, Document> loadSources(){
-	
-	Map<String, Document> documentMap = new HashMap<String, Document>();
+
+    public Map<String, Source> loadSources() {
+
+	Map<String, Source> documentMap = new HashMap<String, Source>();
 
 	if (compendiumConfiguration != null) {
 	    Map<String, CompendiumConfiguration> configurations = compendiumConfiguration.getCompendiums();
 
 	    configurations.entrySet().stream().forEach(element -> {
 		LOGGER.info("Loading compendium {}", element.getKey());
-		ResponseEntity<String> xml = restTemplate.getForEntity(element.getValue().getSourceUrl(), String.class);
+		Source source = new Source();
+		source.setName(element.getKey().toString());
+		source.setUrl(element.getValue().toString());
 
-		Document document = this.parseXML(xml.getBody());
-		NodeList list = document.getElementsByTagName("file");
-		for(int i = 0; i < list.getLength(); i++) {
-		    Node node = list.item(i);
-		    String url = node.getAttributes().getNamedItem("url").getNodeValue();
-		    String name = node.getAttributes().getNamedItem("name").getNodeValue();
-		    LOGGER.info("{}: {}",name, url);
+		ResponseEntity<String> sourceResponse = restTemplate.getForEntity(element.getValue().getSourceUrl(),
+			String.class);
+
+		Document document = this.parseXML(sourceResponse.getBody());
+		NodeList bookUrls = document.getElementsByTagName("file");
+		for (int i = 0; i < bookUrls.getLength(); i++) {
+		    Node bookUrl = bookUrls.item(i);
+		    String url = bookUrl.getAttributes().getNamedItem("url").getNodeValue();
+		    String name = bookUrl.getAttributes().getNamedItem("name").getNodeValue();
+
+		    if (!url.equals(source.getUrl())) {
+			LOGGER.info("Book: {} - {}", name, url);
+
+			ResponseEntity<String> bookResponse = restTemplate.getForEntity(url, String.class);
+
+			Document bookSource = this.parseXML(bookResponse.getBody());
+			NodeList chapterUrls = bookSource.getElementsByTagName("file");
+			for (int j = 0; j < chapterUrls.getLength(); j++) {
+
+			    Node chapterNode = chapterUrls.item(j);
+			    String chapterUrl = chapterNode.getAttributes().getNamedItem("url").getNodeValue();
+			    String chapterName = chapterNode.getAttributes().getNamedItem("name").getNodeValue();
+			    if (!url.equals(chapterUrl)) {
+				Book book = new Book();
+				book.setName(chapterName);
+				book.setUrl(chapterUrl);
+
+				LOGGER.info("Conetnts - {}: {}", chapterName, chapterUrl);
+				ResponseEntity<String> response = restTemplate.getForEntity(chapterUrl, String.class);
+				Document contents = this.parseXML(response.getBody());
+
+				book.getTexts().put(chapterName, contents);
+				source.getTexts().put(name, book);
+			    } else {
+				LOGGER.info("Discarding loopback url");
+			    }
+			}
+		    } else {
+			LOGGER.info("Discarding loopback url");
+		    }
 		}
 
+		documentMap.put(source.getName(), source);
 	    });
 	}
 	return documentMap;
     }
 
     public CompendiumSourcesConfiguration getCompendiumConfiguration() {
-        return compendiumConfiguration;
+	return compendiumConfiguration;
     }
 
     public void setCompendiumConfiguration(CompendiumSourcesConfiguration compendiumConfiguration) {
-        this.compendiumConfiguration = compendiumConfiguration;
+	this.compendiumConfiguration = compendiumConfiguration;
     }
 
     public RestTemplate getRestTemplate() {
-        return restTemplate;
+	return restTemplate;
     }
 
     public void setRestTemplate(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
+	this.restTemplate = restTemplate;
     }
 
     public static Logger getLogger() {
-        return LOGGER;
+	return LOGGER;
     }
-    
-    
-    
+
 }

@@ -20,7 +20,7 @@ class CompendiumSourceLoaderTest {
     
     @Test
     void test() {
-	 Map<String, Document> map = loader.loadSources();
+	 Map<String, Source> map = loader.loadSources();
 	 
 	 assertNotNull(map);
     }

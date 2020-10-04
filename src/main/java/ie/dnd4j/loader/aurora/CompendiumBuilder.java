@@ -35,51 +35,15 @@ import ie.dnd4j.rules.stats.ArmourClassRule;
 import ie.dnd4j.rules.stats.RacialAbilityModifierRule;
 import ie.dnd4j.spells.Spell;
 
-public class WebCompendiumLoader extends XMLReader implements CompendiumLoader {
+public class CompendiumBuilder extends XMLReader {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(WebCompendiumLoader.class);
-
-    private CompendiumSourcesConfiguration compendiumConfiguration;
-
-    private RestTemplate restTemplate;
+    private static final Logger LOGGER = LoggerFactory.getLogger(CompendiumBuilder.class);
 
     private Compendium compendium;
 
-    public WebCompendiumLoader() {
+    public CompendiumBuilder() {
 	compendium = new Compendium();
 	compendium.setSource("Aurora");
-    }
-
-    @Override
-    public void loadCompendiums() {
-	Map<String, Document> documentMap = new HashMap<String, Document>();
-
-	if (compendiumConfiguration != null) {
-	    Map<String, CompendiumConfiguration> configurations = compendiumConfiguration.getCompendiums();
-
-	    configurations.entrySet().stream().forEach(element -> {
-		LOGGER.info("Loading compendium {}", element.getKey());
-
-		CompendiumConfiguration config = element.getValue();
-
-		config.getUrls().entrySet().stream().forEach(subElement -> {
-		    LOGGER.info(" - Loading section {} : {}", subElement.getKey(), subElement.getValue());
-
-		    ResponseEntity<String> xml = restTemplate.getForEntity(subElement.getValue(), String.class);
-
-		    Document document = this.parseXML(xml.getBody());
-
-		    if (document != null) {
-
-			documentMap.put(subElement.getKey(), document);
-
-		    }
-		});
-
-	    });
-	    buildCompendium(documentMap);
-	}
-
     }
 
     /**
@@ -87,21 +51,34 @@ public class WebCompendiumLoader extends XMLReader implements CompendiumLoader {
      * 
      * @param documents
      */
-    private void buildCompendium(Map<String, Document> documents) {
-	if (documents.isEmpty()) {
+    public void buildCompendium(Map<String, Source> sources) {
+	if (sources.isEmpty()) {
 	    return;
 	}
 
-	documents.entrySet().stream().forEach(entrySet -> {
-	    LOGGER.info("Building compendium from document {}", entrySet.getKey());
-	    Document document = entrySet.getValue();
-	    NodeList list = document.getElementsByTagName("element");
+	sources.entrySet().forEach(entry -> {
 
-	    for (int i = 0; i < list.getLength(); i++) {
-		processNode((Element) list.item(i));
-	    }
-	    LOGGER.info("Elements: {}", list.getLength());
+	    LOGGER.info("Building source {}", entry.getKey());
+
+	    Source source = entry.getValue();
+
+	    source.getTexts().entrySet().stream().forEach(sourceEntrySet -> {
+		LOGGER.info("Building compendium from document {}", sourceEntrySet.getKey());
+		Book book = sourceEntrySet.getValue();
+
+		book.getTexts().entrySet().stream().forEach(bookEntrySet -> {
+
+		    Document document = bookEntrySet.getValue();
+		    NodeList list = document.getElementsByTagName("element");
+
+		    for (int i = 0; i < list.getLength(); i++) {
+			processNode((Element) list.item(i));
+		    }
+		    LOGGER.info("Elements: {}", list.getLength());
+		});
+	    });
 	});
+
     }
 
     /***
@@ -114,7 +91,6 @@ public class WebCompendiumLoader extends XMLReader implements CompendiumLoader {
 	Map<String, String> attributes = new HashMap<String, String>();
 	Map<String, String> stats = new HashMap<String, String>();
 	Map<String, List<String>> select = new HashMap<String, List<String>>();
-	
 
 	String name = element.getAttribute("name");
 	String type = element.getAttribute("type");
@@ -147,23 +123,23 @@ public class WebCompendiumLoader extends XMLReader implements CompendiumLoader {
 	    stat.stream().forEach(node -> {
 		stats.put(node.getAttribute("name").toLowerCase(), node.getAttribute("value"));
 	    });
-	    
+
 	    List<Element> selects = DomUtils.getChildElementsByTagName(e, "select");
-	    selects.stream().forEach(node ->{
-		String selectName =  node.getAttribute("name");
+	    selects.stream().forEach(node -> {
+		String selectName = node.getAttribute("name");
 		select.put(selectName, new ArrayList<String>());
-		List<Element> options =  DomUtils.getChildElementsByTagName(node, "item");
+		List<Element> options = DomUtils.getChildElementsByTagName(node, "item");
 		options.stream().forEach(childNode -> {
 		    select.get(selectName).add(DomUtils.getTextValue(childNode));
 		});
 	    });
-	    
+
 	}
 
 	switch (type.toLowerCase()) {
 	case "item":
 	    Item tools = new Item();
-	    tools.setCost(Integer.valueOf(attributes.get("cost")));
+	    tools.setCost(convertNumber(attributes.get("cost")));
 	    tools.setName(name);
 	    tools.setDescription(description);
 	    tools.setProficiency(attributes.get("proficiency"));
@@ -179,7 +155,7 @@ public class WebCompendiumLoader extends XMLReader implements CompendiumLoader {
 	    break;
 	case "armor":
 	    Armour armour = new Armour();
-	    armour.setCost(Integer.valueOf(attributes.get("cost")));
+	    armour.setCost(convertNumber(attributes.get("cost")));
 	    armour.setDescription(description);
 	    armour.setName(name);
 	    armour.setProficiency(attributes.get("proficiency"));
@@ -331,23 +307,7 @@ public class WebCompendiumLoader extends XMLReader implements CompendiumLoader {
 	return description.getTextContent();
     }
 
-    public CompendiumSourcesConfiguration getCompendiumConfiguration() {
-	return compendiumConfiguration;
-    }
 
-    public void setCompendiumConfiguration(CompendiumSourcesConfiguration compendiumConfiguration) {
-	this.compendiumConfiguration = compendiumConfiguration;
-    }
-
-    public RestTemplate getRestTemplate() {
-	return restTemplate;
-    }
-
-    public void setRestTemplate(RestTemplate restTemplate) {
-	this.restTemplate = restTemplate;
-    }
-
-    @Override
     public Compendium getCompendium() {
 	return compendium;
     }

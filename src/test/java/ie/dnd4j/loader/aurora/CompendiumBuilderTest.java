@@ -11,10 +11,14 @@ import ie.dnd4j.configuration.CompendiumAutoConfiguration;
 import ie.dnd4j.configuration.CompendiumSourcesConfiguration;
 
 @SpringBootTest(classes = {CompendiumAutoConfiguration.class})
-public class WebCompendiumLoaderTest extends JsonFileWriterTest {
+public class CompendiumBuilderTest extends JsonFileWriterTest {
+
 
     @Autowired
-    private WebCompendiumLoader loader;
+    private CompendiumSourceLoader webLoader;
+    
+    @Autowired
+    private CompendiumBuilder processor;
     
     @Autowired
     private CompendiumSourcesConfiguration sources;
@@ -22,18 +26,18 @@ public class WebCompendiumLoaderTest extends JsonFileWriterTest {
     @Test
     public void testConfiguration() {
 	
-	CompendiumSourcesConfiguration  source = loader.getCompendiumConfiguration();
+	CompendiumSourcesConfiguration  source = webLoader.getCompendiumConfiguration();
 	assertNotNull(source);
 
-	assertNotNull(loader);
+	assertNotNull(processor);
 	assertNotNull(sources);
     }
 
     
     @Test
     public void testLoadCompendiums() {
-	loader.loadCompendiums();
-	writeOutput(loader.getCompendium(), "src/test/resources/test-output/compendium.json");
+	processor.buildCompendium(webLoader.loadSources());
+	writeOutput(processor.getCompendium(), "src/test/resources/test-output/compendium.json");
 	
     }
 }

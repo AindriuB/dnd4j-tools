@@ -1,7 +1,7 @@
 compendiums:
   players-handbook:
     name: player-handbook
-    source-url: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook.index
+    source-url: https://raw.githubusercontent.com/aurorabuilder/elements/master/core.index
     urls:
       race-dragonborn: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-dragonborn.xml
       race-dwarf: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/races/race-dwarf.xml
@@ -37,4 +37,6 @@ compendiums:
       spells: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/spells.xml
       deities: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/deities.xml
       companions: https://raw.githubusercontent.com/aurorabuilder/elements/master/core/players-handbook/companions.xml
-  
+  suppliments:
+    name: suppliments
+    source-url: https://raw.githubusercontent.com/aurorabuilder/elements/master/supplements.index
