@@ -64,11 +64,12 @@ public class CompendiumBuilder extends XMLReader {
 
 	    source.getTexts().entrySet().stream().forEach(sourceEntrySet -> {
 		LOGGER.info("Building compendium from document {}", sourceEntrySet.getKey());
-		Book book = sourceEntrySet.getValue();
+		final Book book = sourceEntrySet.getValue();
 
-		book.getTexts().entrySet().stream().forEach(bookEntrySet -> {
+		book.getTexts().entrySet().stream().forEach(chapterEntrySet -> {
 
-		    Document document = bookEntrySet.getValue();
+		    LOGGER.info("Building chapter {} from book {}", chapterEntrySet.getKey(),  sourceEntrySet.getKey());
+		    Document document = chapterEntrySet.getValue();
 		    NodeList list = document.getElementsByTagName("element");
 
 		    for (int i = 0; i < list.getLength(); i++) {

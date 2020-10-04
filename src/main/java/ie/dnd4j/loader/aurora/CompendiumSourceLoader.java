@@ -49,6 +49,9 @@ public class CompendiumSourceLoader extends XMLReader {
 
 			ResponseEntity<String> bookResponse = restTemplate.getForEntity(url, String.class);
 
+			Book book = new Book();
+			book.setName(name);
+			book.setUrl(name);
 			Document bookSource = this.parseXML(bookResponse.getBody());
 			NodeList chapterUrls = bookSource.getElementsByTagName("file");
 			for (int j = 0; j < chapterUrls.getLength(); j++) {
@@ -57,20 +60,18 @@ public class CompendiumSourceLoader extends XMLReader {
 			    String chapterUrl = chapterNode.getAttributes().getNamedItem("url").getNodeValue();
 			    String chapterName = chapterNode.getAttributes().getNamedItem("name").getNodeValue();
 			    if (!url.equals(chapterUrl)) {
-				Book book = new Book();
-				book.setName(chapterName);
-				book.setUrl(chapterUrl);
+
 
 				LOGGER.info("Conetnts - {}: {}", chapterName, chapterUrl);
 				ResponseEntity<String> response = restTemplate.getForEntity(chapterUrl, String.class);
 				Document contents = this.parseXML(response.getBody());
 
 				book.getTexts().put(chapterName, contents);
-				source.getTexts().put(name, book);
 			    } else {
 				LOGGER.info("Discarding loopback url");
 			    }
 			}
+			source.getTexts().put(name, book);
 		    } else {
 			LOGGER.info("Discarding loopback url");
 		    }
