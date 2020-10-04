@@ -1,18 +1,11 @@
 package ie.dnd4j.loader.aurora;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +15,6 @@ import org.springframework.web.client.RestTemplate;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
 
 import ie.dnd4j.Compendium;
 import ie.dnd4j.abilities.Ability;
@@ -43,7 +35,7 @@ import ie.dnd4j.rules.stats.ArmourClassRule;
 import ie.dnd4j.rules.stats.RacialAbilityModifierRule;
 import ie.dnd4j.spells.Spell;
 
-public class WebCompendiumLoader implements CompendiumLoader {
+public class WebCompendiumLoader extends XMLReader implements CompendiumLoader {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WebCompendiumLoader.class);
 
@@ -75,7 +67,7 @@ public class WebCompendiumLoader implements CompendiumLoader {
 
 		    ResponseEntity<String> xml = restTemplate.getForEntity(subElement.getValue(), String.class);
 
-		    Document document = parseXML(xml.getBody());
+		    Document document = this.parseXML(xml.getBody());
 
 		    if (document != null) {
 
@@ -88,47 +80,6 @@ public class WebCompendiumLoader implements CompendiumLoader {
 	    buildCompendium(documentMap);
 	}
 
-    }
-
-    /**
-     * Default encoding of UTF-8
-     * 
-     * @param xml
-     * @return
-     */
-    private Document parseXML(String xml) {
-	return parseXML(xml, "UTF-8");
-    }
-
-    /***
-     * Parse the XML body from the end point
-     * 
-     * @param xml
-     * @param encoding
-     * @return an XML Document
-     */
-    private Document parseXML(String xml, String encoding) {
-	if (encoding == null) {
-	    encoding = "UTF-8";
-	}
-
-	LOGGER.info("Parsing XML - length {}", xml.length());
-	Document doc = null;
-	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	factory.setValidating(false);
-	factory.setNamespaceAware(false);
-	factory.setIgnoringElementContentWhitespace(true);
-	DocumentBuilder builder;
-	try {
-	    builder = factory.newDocumentBuilder();
-	    BufferedInputStream is = new BufferedInputStream(new ByteArrayInputStream(xml.getBytes("UTF-8")));
-	    doc = builder.parse(is);
-	} catch (ParserConfigurationException | SAXException | IOException e) {
-	    LOGGER.error("XML: {}", xml);
-	    LOGGER.error("Failed to read document", e);
-	}
-
-	return doc;
     }
 
     /**

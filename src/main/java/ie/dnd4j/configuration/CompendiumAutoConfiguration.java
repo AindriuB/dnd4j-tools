@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+import ie.dnd4j.loader.aurora.CompendiumSourceLoader;
 import ie.dnd4j.loader.aurora.WebCompendiumLoader;
 
 @EnableConfigurationProperties
@@ -23,6 +24,14 @@ public class CompendiumAutoConfiguration {
     @Bean
     public WebCompendiumLoader compendiumLoader() {
 	WebCompendiumLoader loader = new WebCompendiumLoader();
+	loader.setRestTemplate(restTemplate);
+	loader.setCompendiumConfiguration(compendiumConfiguration);
+	return loader;
+    }
+    
+    @Bean
+    public CompendiumSourceLoader sourceLoader() {
+	CompendiumSourceLoader loader = new CompendiumSourceLoader();
 	loader.setRestTemplate(restTemplate);
 	loader.setCompendiumConfiguration(compendiumConfiguration);
 	return loader;
