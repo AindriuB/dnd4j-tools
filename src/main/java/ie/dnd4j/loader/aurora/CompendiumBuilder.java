@@ -9,9 +9,7 @@ import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.ResponseEntity;
 import org.springframework.util.xml.DomUtils;
-import org.springframework.web.client.RestTemplate;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -20,14 +18,11 @@ import ie.dnd4j.Compendium;
 import ie.dnd4j.abilities.Ability;
 import ie.dnd4j.character.Alignment;
 import ie.dnd4j.character.background.Background;
-import ie.dnd4j.configuration.CompendiumConfiguration;
-import ie.dnd4j.configuration.CompendiumSourcesConfiguration;
 import ie.dnd4j.feats.Feat;
 import ie.dnd4j.items.Armour;
 import ie.dnd4j.items.ArmourType;
 import ie.dnd4j.items.Item;
 import ie.dnd4j.items.Weapon;
-import ie.dnd4j.loader.CompendiumLoader;
 import ie.dnd4j.race.Race;
 import ie.dnd4j.religion.Deity;
 import ie.dnd4j.rules.dependencies.AbilityDependency;
@@ -66,6 +61,7 @@ public class CompendiumBuilder extends XMLReader {
 		LOGGER.info("Building compendium from document {}", sourceEntrySet.getKey());
 		final Book book = sourceEntrySet.getValue();
 
+		compendium.getSources().add(sourceEntrySet.getKey());
 		book.getTexts().entrySet().stream().forEach(chapterEntrySet -> {
 
 		    LOGGER.info("Building chapter {} from book {}", chapterEntrySet.getKey(),  sourceEntrySet.getKey());
@@ -73,8 +69,13 @@ public class CompendiumBuilder extends XMLReader {
 		    NodeList list = document.getElementsByTagName("element");
 
 		    for (int i = 0; i < list.getLength(); i++) {
-			processNode((Element) list.item(i));
+			try {
+			    processNode((Element) list.item(i));
+			} catch (Exception e) {  
+			    LOGGER.error("Error parsing Node", e);   
+			}
 		    }
+
 		    LOGGER.info("Elements: {}", list.getLength());
 		});
 	    });
@@ -307,7 +308,6 @@ public class CompendiumBuilder extends XMLReader {
 	}
 	return description.getTextContent();
     }
-
 
     public Compendium getCompendium() {
 	return compendium;
